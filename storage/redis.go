@@ -46,6 +46,13 @@ type PaymentCharts struct {
 	Amount     int64  `json:"amount"`
 }
 
+type SumRewardData struct {
+	Interval       int64    `json:"inverval"`
+	Reward         int64    `json:"reward"`
+	Name           string   `json:"name"`
+	Offset         int64    `json:"offset"`
+}
+
 type RewardData struct {
 	Height	       int64    `json:"blockheight"`
 	BlockHash      string   `json:"blockhash"`
