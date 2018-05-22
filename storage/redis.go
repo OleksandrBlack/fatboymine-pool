@@ -33,6 +33,15 @@ type SumRewardData struct {
 	Offset   int64  `json:"offset"`
 }
 
+type RewardData struct {
+	Height    int64   `json:"blockheight"`
+	Timestamp int64   `json:"timestamp"`
+	BlockHash string  `json:"blockhash"`
+	Reward    int64   `json:"reward"`
+	Percent   float64 `json:"percent"`
+	Immature  bool    `json:"immature"`
+}
+
 type PoolCharts struct {
 	Timestamp  int64  `json:"x"`
 	TimeFormat string `json:"timeFormat"`
