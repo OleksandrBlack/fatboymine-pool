@@ -2,14 +2,17 @@
   <div class="container">
     <p class="lead">Total hashrate: {{format-hashrate model.hashrate}}.</p>
     <strong>Total miners:</strong> <span class="label label-info">{{model.minersTotal}}</span>
-    <div class="input-group" style="margin-top: 20px;">
-        {{input value=cachedLogin class="form-control m-input m-input--air" placeholder="Enter Your Wallet Address"}}
-        <span class="input-group-btn">
-                                <button class="btn m-btn m-btn--gradient-from-primary m-btn--gradient-to-info" type="button" {{action 'lookup' cachedLogin}}>
-                                  <span style="display: inline;"><i class="fa fa-search"></i> Lookup</span>
-                                </button>
-                            </span>
+  <div class="stats">
+    <h4>Your Stats &amp; Payment History</h4>
+    <div class="input-group">
+      {{input value=cachedLogin class="form-control" placeholder="Enter Your ETH Address"}}
+      <span class="input-group-btn">
+        <button class="btn btn-primary" type="button" {{action 'lookup' cachedLogin}}>
+          <span style="display: inline;"><i class="fa fa-search"></i> Lookup</span>
+        </button>
+      </span>
     </div>
+  </div>
   </div>
 </div>
 <div class="container">
