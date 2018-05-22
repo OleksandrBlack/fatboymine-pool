@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'open-social-pool',
+    modulePrefix: 'fatboymine-pool',
     environment: environment,
     rootURL: '/',
     locationType: 'hash',
@@ -15,14 +15,14 @@ module.exports = function(environment) {
 
     APP: {
       // API host and port
-      ApiUrl: '//pool.ethereumsocial.kr/',
+      ApiUrl: '//eth.fatboymine.com/',
 
       // HTTP mining endpoint
-      HttpHost: 'http://pool.ethereumsocial.kr',
+      HttpHost: 'http://eth.fatboymine.com',
       HttpPort: 8888,
 
       // Stratum mining endpoint
-      StratumHost: 'pool.ethereumsocial.kr',
+      StratumHost: 'eth.fatboymine.com',
       StratumPort: 8008,
 
       // Fee and payout details

@@ -5,8 +5,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/ethereumsocial/open-social-pool/rpc"
-	"github.com/ethereumsocial/open-social-pool/storage"
+	"github.com/OleksandrBlack/fatboymine-pool/rpc"
+	"github.com/OleksandrBlack/fatboymine-pool/storage"
 )
 
 func TestMain(m *testing.M) {

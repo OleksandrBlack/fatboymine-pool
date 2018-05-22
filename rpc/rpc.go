@@ -14,7 +14,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/ethereumsocial/open-social-pool/util"
+	"github.com/OleksandrBlack/fatboymine-pool/util"
 )
 
 type RPCClient struct {

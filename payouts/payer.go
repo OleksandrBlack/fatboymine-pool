@@ -12,9 +12,9 @@ import (
 
 	"github.com/ethereum/go-ethereum/common/hexutil"
 
-	"github.com/ethereumsocial/open-social-pool/rpc"
-	"github.com/ethereumsocial/open-social-pool/storage"
-	"github.com/ethereumsocial/open-social-pool/util"
+	"github.com/OleksandrBlack/fatboymine-pool/rpc"
+	"github.com/OleksandrBlack/fatboymine-pool/storage"
+	"github.com/OleksandrBlack/fatboymine-pool/util"
 )
 
 const txCheckInterval = 5 * time.Second

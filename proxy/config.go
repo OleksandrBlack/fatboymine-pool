@@ -1,10 +1,10 @@
 package proxy
 
 import (
-	"github.com/ethereumsocial/open-social-pool/api"
-	"github.com/ethereumsocial/open-social-pool/payouts"
-	"github.com/ethereumsocial/open-social-pool/policy"
-	"github.com/ethereumsocial/open-social-pool/storage"
+	"github.com/OleksandrBlack/fatboymine-pool/api"
+	"github.com/OleksandrBlack/fatboymine-pool/payouts"
+	"github.com/OleksandrBlack/fatboymine-pool/policy"
+	"github.com/OleksandrBlack/fatboymine-pool/storage"
 )
 
 type Config struct {

@@ -13,10 +13,10 @@ import (
 
 	"github.com/yvasiyarov/gorelic"
 
-	"github.com/ethereumsocial/open-social-pool/api"
-	"github.com/ethereumsocial/open-social-pool/payouts"
-	"github.com/ethereumsocial/open-social-pool/proxy"
-	"github.com/ethereumsocial/open-social-pool/storage"
+	"github.com/OleksandrBlack/fatboymine-pool/api"
+	"github.com/OleksandrBlack/fatboymine-pool/payouts"
+	"github.com/OleksandrBlack/fatboymine-pool/proxy"
+	"github.com/OleksandrBlack/fatboymine-pool/storage"
 )
 
 var cfg proxy.Config

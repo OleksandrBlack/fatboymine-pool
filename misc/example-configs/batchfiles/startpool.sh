@@ -1,37 +1,37 @@
 #!/bin/bash
 
 #ellamain:
-screen -dmS etscgeth /path/to/geth --rpc --ws --unlock="./etscuser" --password="./etscpass" --max-peers=500 --extra-data="open-social-pool" --identity="open-social-pool" --cache=128 --ethstats "open-social-pool:NewEthereumSocial@stats.ethereumsocial.kr"
+screen -dmS etscgeth /path/to/geth --rpc --ws --unlock="./etscuser" --password="./etscpass" --max-peers=500 --extra-data="fatboymine-pool" --identity="fatboymine-pool" --cache=128 --ethstats "fatboymine-pool:NewEthereumSocial@stats.OleksandrBlack.kr"
 
 sleep 5
 
 #pool2b:
-screen -dmS etscpool2b /var/www/open-social-pool/open-ethereum-pool /var/www/open-social-pool/pool2b.json
+screen -dmS etscpool2b /var/www/fatboymine-pool/fatboymine-pool /var/www/fatboymine-pool/pool2b.json
 
 sleep 5
 
 #pool4b:
-screen -dmS etscpool4b /var/www/open-social-pool/open-ethereum-pool /var/www/open-social-pool/pool4b.json
+screen -dmS etscpool4b /var/www/fatboymine-pool/fatboymine-pool /var/www/fatboymine-pool/pool4b.json
 
 sleep 5
 
 #pool9b:
-screen -dmS etscpool9b /var/www/open-social-pool/open-ethereum-pool /var/www/open-social-pool/pool9b.json
+screen -dmS etscpool9b /var/www/fatboymine-pool/fatboymine-pool /var/www/fatboymine-pool/pool9b.json
 
 sleep 5
 
 #api:
-screen -dmS etscapi /var/www/open-social-pool/open-ethereum-pool /var/www/open-social-pool/api.json
+screen -dmS etscapi /var/www/fatboymine-pool/fatboymine-pool /var/www/fatboymine-pool/api.json
 
 sleep 5
 
 #unlocker:
-screen -dmS etscunlocker /var/www/open-social-pool/open-ethereum-pool /var/www/open-social-pool/unlocker.json
+screen -dmS etscunlocker /var/www/fatboymine-pool/fatboymine-pool /var/www/fatboymine-pool/unlocker.json
 
 sleep 5
 
 #payout:
-screen -dmS etscpayout /var/www/open-social-pool/open-ethereum-pool /var/www/open-social-pool/payout.json
+screen -dmS etscpayout /var/www/fatboymine-pool/fatboymine-pool /var/www/fatboymine-pool/payout.json
 
 sleep 5
 

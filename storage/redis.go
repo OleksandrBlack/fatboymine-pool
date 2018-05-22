@@ -10,7 +10,7 @@ import (
 
 	"gopkg.in/redis.v3"
 
-	"github.com/ethereumsocial/open-social-pool/util"
+	"github.com/OleksandrBlack/fatboymine-pool/util"
 )
 
 type Config struct {
