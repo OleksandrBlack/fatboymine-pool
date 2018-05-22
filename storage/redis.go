@@ -672,13 +672,15 @@ func (r *RedisClient) WriteReward(login string, amount int64, percent *big.Rat, 
         tx := r.client.Multi()
         defer tx.Close()
 
-	addStr := join(amount, percent, immature, block.Hash, block.Height)
-	remStr := join(amount, percent, !immature, block.Hash, block.Height)
+	addStr := join(amount, percent, immature, block.Hash, block.Height, block.Timestamp)
+	remStr := join(amount, percent, !immature, block.Hash, block.Height, block.Timestamp)
+
+	remscore := block.Timestamp - 3600 * 24 * 40	// Store the last 40 Days
 
         _, err := tx.Exec(func() error {
-                tx.ZAdd(r.formatKey("rewards", login), redis.Z{Score: float64(block.Height), Member: addStr})
+                tx.ZAdd(r.formatKey("rewards", login), redis.Z{Score: float64(block.Timestamp), Member: addStr})
 		tx.ZRem(r.formatKey("rewards", login), remStr)
-                tx.ZRemRangeByRank(r.formatKey("rewards", login), 0, -100)
+                tx.ZRemRangeByScore(r.formatKey("rewards", login), "-inf", "(" + strconv.FormatInt(remscore, 10))
                 return nil
         })
         return err
@@ -1134,13 +1136,14 @@ func convertRewardResults(rows ...*redis.ZSliceCmd) []*RewardData {
                 for _, v := range row.Val() {
                         // "amount:percent:immature:block.Hash:block.height"
                         reward := RewardData{}
-                        reward.Height = int64(v.Score)
+                        reward.Timestamp = int64(v.Score)
                         fields := strings.Split(v.Member.(string), ":")
                         //block.UncleHeight, _ = strconv.ParseInt(fields[0], 10, 64)
                         reward.BlockHash = fields[3]
 			reward.Reward, _ = strconv.ParseInt(fields[0], 10, 64)
 			reward.Percent, _ =  strconv.ParseFloat(fields[1], 64)
 			reward.Immature, _ = strconv.ParseBool(fields[2])
+			reward.Height, _ = strconv.ParseInt(fields[4], 10, 64)
                         result = append(result, &reward)
                 }
         }
