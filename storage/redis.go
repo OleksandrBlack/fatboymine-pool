@@ -953,7 +953,9 @@ func (r *RedisClient) CollectWorkersStats(sWindow, lWindow time.Duration, login 
 	cmds, err := tx.Exec(func() error {
 		tx.ZRemRangeByScore(r.formatKey("hashrate", login), "-inf", fmt.Sprint("(", now-largeWindow))
 		tx.ZRangeWithScores(r.formatKey("hashrate", login), 0, -1)
+		tx.LRange(r.formatKey("lastshares"), 0, r.pplns)
 		tx.ZRevRangeWithScores(r.formatKey("rewards", login), 0, 39)
+		tx.ZRevRangeWithScores(r.formatKey("rewards", login), 0, -1)
 		return nil
 	})
 
@@ -997,16 +999,50 @@ func (r *RedisClient) CollectWorkersStats(sWindow, lWindow time.Duration, login 
 		workers[id] = worker
 	}
 
+	shares := cmds[2].(*redis.StringSliceCmd).Val()
+
+	csh := 0
+	var myshares []string
+	for _, val := range shares {
+		text := "█"
+		if val != login {
+			text = "▁"
+		} else {
+			csh++
+		}
+		//myshares = append(myshares,  strconv.FormatInt(int64(ind) 10))
+		myshares = append(myshares,  text)
+	}
+	stats["roundShares"] = csh
+	stats["shares"] = myshares
 	stats["workers"] = workers
 	stats["workersTotal"] = len(workers)
 	stats["workersOnline"] = online
 	stats["workersOffline"] = offline
 	stats["hashrate"] = totalHashrate
 	stats["currentHashrate"] = currentHashrate
-	
-	rewards := convertRewardResults(cmds[3].(*redis.ZSliceCmd))
-        stats["rewards"] = rewards
-	
+
+	stats["rewards"] = convertRewardResults(cmds[3].(*redis.ZSliceCmd)) // last 40
+	rewards := convertRewardResults(cmds[4].(*redis.ZSliceCmd)) // all
+
+	var dorew []*SumRewardData
+	dorew = append(dorew, &SumRewardData{ Name: "Last 60 minutes", Interval: 3600, Offset: 0 })
+	dorew = append(dorew, &SumRewardData{ Name: "Last 12 hours", Interval: 3600 * 12, Offset: 0 })
+	dorew = append(dorew, &SumRewardData{ Name: "Last 24 hours", Interval: 3600 * 24, Offset: 0 })
+	dorew = append(dorew, &SumRewardData{ Name: "Last 7 days", Interval: 3600 * 24 * 7, Offset: 0 })
+	dorew = append(dorew, &SumRewardData{ Name: "Last 30 days", Interval: 3600 * 24 * 30, Offset: 0 })
+
+	for _, reward := range rewards {
+
+		for _,dore := range dorew {
+			dore.Reward += 0
+			if reward.Timestamp > now - dore.Interval {
+				dore.Reward += reward.Reward
+			}
+		}
+	}
+	stats["sumrewards"] = dorew
+	stats["24hreward"] = dorew[2].Reward
 	return stats, nil
 }
 
