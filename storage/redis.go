@@ -459,13 +459,6 @@ func join(args ...interface{}) string {
 			} else {
 				s[i] = "0"
 			}
-		case *big.Rat:
-			x := v.(*big.Rat)
-			if x != nil {
-				s[i] = x.FloatString(9)
-			} else {
-				s[i] = "0"
-			}
 		default:
 			panic("Invalid type specified for conversion")
 		}
