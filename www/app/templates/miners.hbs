@@ -6,8 +6,6 @@
 </div>
 <div class="container">
   {{#if model.miners}}
-  <div class="stats">
-    <h4>Your Stats &amp; Payment History</h4>
     <div class="input-group">
       {{input value=cachedLogin class="form-control" placeholder="Enter Your ETH Address"}}
       <span class="input-group-btn">
@@ -16,8 +14,8 @@
         </button>
       </span>
     </div>
-  </div>
   <h4>Miners</h4>
+  {{#if model.miners}}
   <div class="table-responsive">
     <table class="table table-condensed table-striped">
       <thead>
