@@ -482,20 +482,20 @@ func (u *BlockUnlocker) calculateRewards(block *storage.BlockData) (*big.Rat, *b
 
 	shares, err := u.backend.GetRoundShares(block.RoundHeight, block.Nonce)
 	if err != nil {
-        return nil, nil, nil, nil, nil, err
+		return nil, nil, nil, nil, nil, err
 	}
 
 	totalShares := int64(0)
 	for _, val := range shares {
-        totalShares += val
+		totalShares += val
 	}
 
 	rewards, percents := calculateRewardsForShares(shares, totalShares, minersProfit)
 
 	if block.ExtraReward != nil {
-        extraReward := new(big.Rat).SetInt(block.ExtraReward)
-        poolProfit.Add(poolProfit, extraReward)
-        revenue.Add(revenue, extraReward)
+		extraReward := new(big.Rat).SetInt(block.ExtraReward)
+		poolProfit.Add(poolProfit, extraReward)
+		revenue.Add(revenue, extraReward)
 	}
 
 	if u.config.Donate {
@@ -504,27 +504,26 @@ func (u *BlockUnlocker) calculateRewards(block *storage.BlockData) (*big.Rat, *b
 		login := strings.ToLower(donationAccount)
 		rewards[login] += weiToShannonInt64(donation)
 	}
-	
+
 	if len(u.config.PoolFeeAddress) != 0 {
-        address := strings.ToLower(u.config.PoolFeeAddress)
-        rewards[address] += weiToShannonInt64(poolProfit)
+		address := strings.ToLower(u.config.PoolFeeAddress)
+		rewards[address] += weiToShannonInt64(poolProfit)
 	}
 
 	return revenue, minersProfit, poolProfit, rewards, percents, nil
 }
 
-func calculateRewardsForShares(shares map[string]int64, total int64, reward *big.Rat)(map[string]int64, map[string]*big.Rat) {
+func calculateRewardsForShares(shares map[string]int64, total int64, reward *big.Rat) map[string]int64, map[string]*big.Rat) {
 	rewards := make(map[string]int64)
 	percents := make(map[string]*big.Rat)
 
 	for login, n := range shares {
-        percents[login] = big.NewRat(n, total)
-        workerReward := new(big.Rat).Mul(reward, percents[login])
-        rewards[login] += weiToShannonInt64(workerReward)
+		percents[login] := big.NewRat(n, total)
+		workerReward := new(big.Rat).Mul(reward, percents[login])
+		rewards[login] += weiToShannonInt64(workerReward)
 	}
 	return rewards, percents
 }
-
 
 // Returns new value after fee deduction and fee value.
 func chargeFee(value *big.Rat, fee float64) (*big.Rat, *big.Rat) {
