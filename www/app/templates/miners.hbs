@@ -5,16 +5,8 @@
   </div>
 </div>
 <div class="container">
-    <div class="input-group">
-      {{input value=cachedLogin class="form-control" placeholder="Enter Your ETH Address"}}
-      <span class="input-group-btn">
-        <button class="btn btn-primary" type="button" {{action 'lookup' cachedLogin}}>
-          <span style="display: inline;"><i class="fa fa-search"></i> Lookup</span>
-        </button>
-      </span>
-    </div>
-  <h4>Miners</h4>
   {{#if model.miners}}
+  <h4>Miners</h4>
   <div class="table-responsive">
     <table class="table table-condensed table-striped">
       <thead>
