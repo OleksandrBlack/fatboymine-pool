@@ -8,7 +8,6 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('account', { path: '/account/:login' }, function() {
     this.route('payouts');
-	this.route('rewards');
   });
   this.route('not-found');
 
