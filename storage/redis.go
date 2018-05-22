@@ -55,6 +55,7 @@ type SumRewardData struct {
 
 type RewardData struct {
 	Height	       int64    `json:"blockheight"`
+	Timestamp      int64    `json:"timestamp"`
 	BlockHash      string   `json:"blockhash"`
 	Reward         int64    `json:"reward"`
 	Percent        float64  `json:"percent"`
