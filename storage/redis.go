@@ -25,6 +25,7 @@ type RedisClient struct {
 	client *redis.Client
 	prefix string
 	pplns int64
+	CoinName string
 }
 
 type PoolCharts struct {
@@ -45,13 +46,6 @@ type PaymentCharts struct {
 	Timestamp  int64  `json:"x"`
 	TimeFormat string `json:"timeFormat"`
 	Amount     int64  `json:"amount"`
-}
-
-type RedisClient struct {
-	client *redis.Client
-	prefix string
-	pplns  int64
-	CoinName string
 }
 
 type SumRewardData struct {
