@@ -5,6 +5,8 @@ import (
 	"github.com/OleksandrBlack/fatboymine-pool/payouts"
 	"github.com/OleksandrBlack/fatboymine-pool/policy"
 	"github.com/OleksandrBlack/fatboymine-pool/storage"
+	"github.com/OleksandrBlack/fatboymine-pool/exchange"
+
 )
 
 type Config struct {
@@ -18,10 +20,13 @@ type Config struct {
 
 	Coin  string         `json:"coin"`
 	Pplns int64          `json:"pplns"`
+	CoinName  string         `json:"coin-name"`
 	Redis storage.Config `json:"redis"`
 
 	BlockUnlocker payouts.UnlockerConfig `json:"unlocker"`
 	Payouts       payouts.PayoutsConfig  `json:"payouts"`
+	
+	Exchange  exchange.ExchangeConfig `json:"exchange"`
 
 	NewrelicName    string `json:"newrelicName"`
 	NewrelicKey     string `json:"newrelicKey"`
