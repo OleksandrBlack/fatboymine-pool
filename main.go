@@ -15,6 +15,7 @@ import (
 	"github.com/OleksandrBlack/fatboymine-pool/payouts"
 	"github.com/OleksandrBlack/fatboymine-pool/proxy"
 	"github.com/OleksandrBlack/fatboymine-pool/storage"
+	"github.com/OleksandrBlack/fatboymine-pool/exchange"
 )
 
 var cfg proxy.Config
@@ -45,8 +46,6 @@ func startExchangeProcessor() {
 	u := exchange.StartExchangeProcessor(&cfg.Exchange, backend)
 	u.Start()
 }
-
-
 
 func startNewrelic() {
 	if cfg.NewrelicEnabled {
