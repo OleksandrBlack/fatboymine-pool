@@ -9,6 +9,7 @@ import (
 	"time"
 
 	"gopkg.in/redis.v3"
+	"log"
 
 	"github.com/OleksandrBlack/fatboymine-pool/util"
 )
@@ -1326,11 +1327,12 @@ func (r *RedisClient) StoreExchangeData(ExchangeData []map[string]string) {
 			cmd := tx.HSet(r.formatKey("exchange", coindata["symbol"]), key, value)
 			err := cmd.Err()
 			if err != nil {
-				return nil, err
+				log.Printf("Error while Storing %s : Key-%s , value-%s , Error : %v", coindata["symbol"], key, value, err)
 			}
 
 		}
 	}
+	log.Printf("Writing Exchange Data ")
 	return
 }
 
