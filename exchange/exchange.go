@@ -9,8 +9,8 @@ import (
 	"net/http"
 	"log"
 
-	"github.com/saifiifazal/open-ethereum-pool/util"
-	"github.com/saifiifazal/open-ethereum-pool/storage"
+	"github.com/OleksandrBlack/fatboymine-pool/util"
+	"github.com/OleksandrBlack/fatboymine-pool/storage"
 	"io/ioutil"
 
 )
