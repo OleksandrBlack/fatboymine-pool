@@ -45,7 +45,7 @@
         {{/active-li}}
 		
                         <li>
-                            <a class="fa fa-money" title="{{config.COIN}} Current Price">
+                            <i class="fa fa-money" title="{{config.COIN}} Current Price"></i>
                                 {{#if isPercentAboveZero}}
                                     ${{format-number model.exchangedata.price_usd maximumFractionDigits='2'}} <span class="badge alert-success"><i class="fa fa-caret-up"></i> (+{{model.exchangedata.percent_change_24h}}%)</span>
                                 </span>
