@@ -236,6 +236,7 @@ func (s *ApiServer) StatsIndex(w http.ResponseWriter, r *http.Request) {
 		reply["maturedTotal"] = stats["maturedTotal"]
 		reply["immatureTotal"] = stats["immatureTotal"]
 		reply["candidatesTotal"] = stats["candidatesTotal"]
+		reply["exchangedata"] = stats["exchangedata"]
 	}
 
 	err = json.NewEncoder(w).Encode(reply)
@@ -300,6 +301,7 @@ func (s *ApiServer) PaymentsIndex(w http.ResponseWriter, r *http.Request) {
 	if stats != nil {
 		reply["payments"] = stats["payments"]
 		reply["paymentsTotal"] = stats["paymentsTotal"]
+		reply["exchangedata"] = stats["exchangedata"]
 	}
 
 	err := json.NewEncoder(w).Encode(reply)
@@ -317,6 +319,8 @@ func (s *ApiServer) AccountIndex(w http.ResponseWriter, r *http.Request) {
 	s.minersMu.Lock()
 	defer s.minersMu.Unlock()
 
+	generalstats := s.getStats()
+	
 	reply, ok := s.miners[login]
 	now := util.MakeTimestamp()
 	cacheIntv := int64(s.statsIntv / time.Millisecond)
@@ -351,6 +355,7 @@ func (s *ApiServer) AccountIndex(w http.ResponseWriter, r *http.Request) {
 		stats["pageSize"] = s.config.Payments
 		stats["minerCharts"], err = s.backend.GetMinerCharts(s.config.MinerChartsNum, login)
 		stats["paymentCharts"], err = s.backend.GetPaymentCharts(login)
+		stats["exchangedata"] = generalstats["exchangedata"]
 		reply = &Entry{stats: stats, updatedAt: now}
 		s.miners[login] = reply
 	}
