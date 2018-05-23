@@ -947,6 +947,10 @@ func (r *RedisClient) CollectStats(smallWindow time.Duration, maxBlocks, maxPaym
 	stats["miners"] = miners
 	stats["minersTotal"] = len(miners)
 	stats["hashrate"] = totalHashrate
+
+	exchangedata, _ := cmds[12].(*redis.StringStringMapCmd).Result()
+	stats["exchangedata"] = exchangedata
+
 	return stats, nil
 }
 
@@ -1310,3 +1314,36 @@ func (r *RedisClient) GetCurrentHashrate(login string) (int64, error) {
 	}
 	return hashrate.Int64()
 }
+
+func (r *RedisClient) StoreExchangeData(ExchangeData []map[string]string) {
+
+	tx := r.client.Multi()
+	defer tx.Close()
+
+	for _, coindata := range ExchangeData {
+		for key, value := range coindata {
+
+			cmd := tx.HSet(r.formatKey("exchange", coindata["symbol"]), key, value)
+			err := cmd.Err()
+			if err != nil {
+				log.Printf("Error while Storing %s : Key-%s , value-%s , Error : %v", coindata["symbol"], key, value, err)
+			}
+
+		}
+	}
+	log.Printf("Writing Exchange Data ")
+	return
+}
+
+func (r *RedisClient) GetExchangeData(coinsymbol string) (map[string]string, error) {
+
+	cmd := r.client.HGetAllMap(r.formatKey("exchange", coinsymbol))
+
+	result, err := cmd.Result()
+
+	if err != nil {
+		return nil, err
+	}
+
+	return result, err
+} 
