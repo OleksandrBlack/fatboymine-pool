@@ -38,12 +38,12 @@
           {{/if}}
           {{/link-to}}
         {{/active-li}}
-        {{#active-li}}
-            <i class="fa fa-users"></i> {{config.COIN}}
+        {{#active-li currentWhen='price'}}
+            <i class="fa fa-money"></i> {{config.COIN}} Current Price
           {{#if isPercentAboveZero}}>
-				${{format-number model.exchangedata.price_usd maximumFractionDigits='2'}}(+{{model.exchangedata.percent_change_24h}}%)
+				${{format-number model.exchangedata.price_usd maximumFractionDigits='2'}} <i class="fa fa-caret-up"></i> (+{{model.exchangedata.percent_change_24h}}%)
             {{else}}
-				${{format-number model.exchangedata.price_usd maximumFractionDigits='2'}} ({{model.exchangedata.percent_change_24h}}%)
+				${{format-number model.exchangedata.price_usd maximumFractionDigits='2'}} <i class="fa fa-caret-down"></i> ({{model.exchangedata.percent_change_24h}}%)
           {{/if}}
         {{/active-li}}
         {{#active-li currentWhen='about'}}
