@@ -47,6 +47,13 @@ type PaymentCharts struct {
 	Amount     int64  `json:"amount"`
 }
 
+type RedisClient struct {
+	client *redis.Client
+	prefix string
+	pplns  int64
+	CoinName string
+}
+
 type SumRewardData struct {
 	Interval       int64    `json:"inverval"`
 	Reward         int64    `json:"reward"`
@@ -117,7 +124,7 @@ type Worker struct {
 	TotalHR int64 `json:"hr2"`
 }
 
-func NewRedisClient(cfg *Config, prefix string, pplns int64) *RedisClient {
+func NewRedisClient(cfg *Config, prefix string, pplns int64,CoinName string) *RedisClient {
 	options := redis.Options{
 		Addr:     cfg.Endpoint,
 		Password: cfg.Password,
@@ -128,7 +135,7 @@ func NewRedisClient(cfg *Config, prefix string, pplns int64) *RedisClient {
 		options.Network = "unix"
 	}
 	client := redis.NewClient(&options)
-	return &RedisClient{client: client, prefix: prefix, pplns: pplns}
+	return &RedisClient{client: client, prefix: prefix, pplns: pplns, CoinName: CoinName}
 }
 
 func (r *RedisClient) Client() *redis.Client {
@@ -918,6 +925,7 @@ func (r *RedisClient) CollectStats(smallWindow time.Duration, maxBlocks, maxPaym
 		tx.HGet(r.formatKey("paymentsTotal"), "all")
 		tx.ZRevRangeWithScores(r.formatKey("payments", "all"), 0, maxPayments-1)
 		tx.LLen(r.formatKey("lastshares"))
+		tx.HGetAllMap(r.formatKey("exchange", r.CoinName))
 		return nil
 	})
 
