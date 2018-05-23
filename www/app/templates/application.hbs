@@ -38,15 +38,13 @@
           {{/if}}
           {{/link-to}}
         {{/active-li}}
-        {{#active-li currentWhen='exchange'}}
-          {{#link-to 'exchange'}}
+        {{#active-li}}
             <i class="fa fa-users"></i> {{config.COIN}}
           {{#if isPercentAboveZero}}>
 				${{format-number model.exchangedata.price_usd maximumFractionDigits='2'}}(+{{model.exchangedata.percent_change_24h}}%)
             {{else}}
 				${{format-number model.exchangedata.price_usd maximumFractionDigits='2'}} ({{model.exchangedata.percent_change_24h}}%)
           {{/if}}
-          {{/link-to}}
         {{/active-li}}
         {{#active-li currentWhen='about'}}
           {{#link-to 'about'}}
