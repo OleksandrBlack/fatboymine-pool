@@ -9,6 +9,7 @@ import (
 	"time"
 
 	"gopkg.in/redis.v3"
+	"log"
 
 	"github.com/OleksandrBlack/fatboymine-pool/util"
 )
