@@ -14,6 +14,13 @@ module.exports = function(environment) {
     },
 
     APP: {
+		
+      COIN: 'ETH',
+      CoinName: 'Ethereum',
+      PPLNS: '3000',
+      blocksMature: '120',
+      minPayouts: '0.05',
+		
       // API host and port
       ApiUrl: '//eth.fatboymine.com/',
 
@@ -27,7 +34,7 @@ module.exports = function(environment) {
 
       // Fee and payout details
       PoolFee: '0%',
-      PayoutThreshold: '0.5 ETSC',
+      PayoutThreshold: '0.5 ETH',
 
       // For network hashrate (change for your favourite fork)
       BlockTime: 14.4
