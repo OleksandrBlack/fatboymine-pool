@@ -1,5 +1,0 @@
-product:
-  info: '{product} будет стоить {price, number, USD} если по заказу {deadline, date, time}'
-  title: 'Привет Мир!'
-  html:
-    info: '<strong>{product}</strong> будет стоить <em>{price, number, USD}</em> если по заказу {deadline, date, time}'
