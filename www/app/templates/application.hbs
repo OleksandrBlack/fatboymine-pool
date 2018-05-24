@@ -14,7 +14,7 @@
       <ul class="nav navbar-nav">
         {{#active-li currentWhen='help'}}
           {{#link-to 'help'}}
-            <i class="fa fa-rocket"></i> Help
+            <i class="fa fa-rocket"></i> <span class="applang1">Help</span>
           {{/link-to}}
         {{/active-li}}
         {{#active-li currentWhen='blocks'}}
@@ -54,6 +54,27 @@
                             </a>
                         </li>
 
+                    <li class="dropdown">
+                        <a class="trlang" href="javascript:;">&nbsp;&nbsp;<i class="fa fa-cog"></i>&nbsp;&nbsp;LANGUAGE</a>
+                        <ul class="dropdown-content-lang">
+                            <li>
+                                <a class="english" id="english" href="javascript:;" onclick="testch(this.id)">
+                                    English
+                                </a>
+                            </li>
+                            <li>
+                                <a class="russian" id="russian" href="javascript:;" onclick="testch(this.id)">
+                                    Русский
+                                </a>
+                            </li>
+                            <li>
+                                <a class="ukrainian" id="ukrainian" href="javascript:;" onclick="testch(this.id)">
+                                    Українська
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+						
       </ul>
     </div>
   </div>
