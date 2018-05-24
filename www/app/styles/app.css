@@ -199,31 +199,18 @@ h4.note {
     display: inline-block;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-    margin-left: -50px;
-}
-
 .dropdown-content-lang {
     display: none;
     position: absolute;
-    background-color: #d9edf7;
+    background-color: #eeeeee;
+	color: black;
     box-shadow: 0px 8px 26px 0px rgba(0,0,0,0.2);
-    padding: 12px 26px;
+    padding: 12px 36px;
     z-index: 1;
     margin-top: -40px;
     margin-left: 10px;
 }
 
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
 .dropdown:hover .dropdown-content-lang {
     display: block;
 }
