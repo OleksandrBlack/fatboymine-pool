@@ -4,23 +4,55 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>eth.fatboymine.com - Official Ethereum Social Mining Pool</title>
+    <title>eth.fatboymine.com - Official Ethereum Mining Pool</title>
 	<meta name="theme-color" content="#1994b8">
-    <meta name="description" content="eth.fatboymine.com is a high profitability Ethereum Social[ETSC] mining pool with PPLNS and Multi-tx payout support."/>
+    <meta name="description" content="eth.fatboymine.com is a high profitability Ethereum[{{config.COIN}}] mining pool with PPLNS and Multi-tx payout support."/>
     <meta name="keywords" content="OleksandrBlack, pool, mining, cryptocurrency"/>
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="eth.fatboymine.com - Official Ethereum Social Mining Pool">
-    <meta name="twitter:description" content="eth.fatboymine.com is a high profitability Ethereum Social[ETSC] mining pool with PPLNS and Multi-tx payout support.">
+    <meta name="twitter:title" content="eth.fatboymine.com - Official Ethereum Mining Pool">
+    <meta name="twitter:description" content="eth.fatboymine.com is a high profitability Ethereum[{{config.COIN}}] mining pool with PPLNS and Multi-tx payout support.">
     <meta name="twitter:image" content="https://OleksandrBlack.kr/img/OleksandrBlack-twitter.png">
-    <meta property="og:title" content="eth.fatboymine.com - Official Ethereum Social Mining Pool">
-    <meta property="og:site_name" content="eth.fatboymine.com - Official Ethereum Social Mining Pool">
-    <meta property="og:description" content="eth.fatboymine.com is a high profitability Ethereum Social[ETSC] mining pool with PPLNS and Multi-tx payout support.">
+    <meta property="og:title" content="eth.fatboymine.com - Official Ethereum Mining Pool">
+    <meta property="og:site_name" content="eth.fatboymine.com - Official Ethereum Mining Pool">
+    <meta property="og:description" content="eth.fatboymine.com is a high profitability Ethereum[{{config.COIN}}] mining pool with PPLNS and Multi-tx payout support.">
     <meta property="og:image" content="https://OleksandrBlack.kr/img/OleksandrBlack-a.png">
     <link href="https://eth.fatboymine.com" rel="canonical">
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="google-site-verification" content="YEsup9m3fdZ43fp2zISkuLnr_EgtNsX2e2f_RhFMysg" />
     <script src="https://cdn.polyfill.io/v1/polyfill.min.js?features=Intl.~locale.en"></script>
+	   <script>
+		$(document).ready(function() {
+			if(localStorage.getItem('language') != null) {
+				language = localStorage.getItem('language');
+				$.ajax({
+				    url: 'assets/translations/' + language + '.xml',
+					success: function(xml) {
+						$(xml).find('translation').each(function(){
+							var id = $(this).attr('id');
+							var text = $(this).text();
+							$("." + id).html(text);
+						});
+					}
+				});
+			}
+		});
+
+		function testch(id) {
+				localStorage.setItem('language', id);
+				language = id
+				$.ajax({
+					url: 'assets/translations/' + language + '.xml',
+					success: function(xml) {
+						$(xml).find('translation').each(function(){
+							var id = $(this).attr('id');
+							var text = $(this).text();
+							$("." + id).html(text);
+						});
+					}
+				});
+			};
+    </script>
     {{content-for "head"}}
     <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
     <link rel="stylesheet" href="{{rootURL}}assets/fatboymine-pool.css">
@@ -36,7 +68,7 @@
 
     <footer class="footer">
       <div class="container">
-        <center><p class="text-muted"><a href="https://OleksandrBlack.kr" target="_blank">ETSC Homepage</a> | <a href="https://wallet.OleksandrBlack.kr" target="_blank">ETSC Web Wallet</a> | <a href="https://ropsten.etherscan.io" target="_blank">ETSC Blockchain Explorer</a> | <a href="https://stats.OleksandrBlack.kr" target="_blank">ETSC Network Dashboard</a> | <a href="https://discord.gg/h6vsEuw" target="_blank">ETSC Community Discord</a></p></center>
+        <center><p class="text-muted"><a href="https://OleksandrBlack.kr" target="_blank">{{config.COIN}} Homepage</a> | <a href="https://wallet.OleksandrBlack.kr" target="_blank">{{config.COIN}} Web Wallet</a> | <a href="https://ropsten.etherscan.io" target="_blank">{{config.COIN}} Blockchain Explorer</a> | <a href="https://stats.OleksandrBlack.kr" target="_blank">{{config.COIN}} Network Dashboard</a> | <a href="https://discord.gg/h6vsEuw" target="_blank">{{config.COIN}} Community Discord</a></p></center>
       </div>
     </footer>
   </body>
