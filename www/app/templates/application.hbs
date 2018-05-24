@@ -14,12 +14,12 @@
       <ul class="nav navbar-nav">
         {{#active-li currentWhen='help'}}
           {{#link-to 'help'}}
-            <i class="fa fa-rocket"></i> <span class="applang1">Help</span>
+            <i class="fa fa-rocket"></i> Help
           {{/link-to}}
         {{/active-li}}
         {{#active-li currentWhen='blocks'}}
           {{#link-to 'blocks'}}
-            <i class="fa fa-cubes"></i> <span class="applang2">Pool Blocks</span>
+            <i class="fa fa-cubes"></i> Pool Blocks
             {{#if immatureTotal}}
               <span class="badge alert-success">{{immatureTotal}}</span>
             {{/if}}
@@ -27,12 +27,12 @@
         {{/active-li}}
         {{#active-li currentWhen='payments'}}
           {{#link-to 'payments'}}
-            <i class="fa fa-paper-plane-o"></i> <span class="applang3">Payments</span>
+            <i class="fa fa-paper-plane-o"></i> Payments
           {{/link-to}}
         {{/active-li}}
         {{#active-li currentWhen='miners'}}
           {{#link-to 'miners'}}
-            <i class="fa fa-users"></i> <span class="applang4">Miners</span>
+            <i class="fa fa-users"></i> Miners
           {{#if model.minersTotal}}
               <span class="badge alert-success">{{model.minersTotal}}</span>
           {{/if}}
@@ -40,7 +40,7 @@
         {{/active-li}}
         {{#active-li currentWhen='about'}}
           {{#link-to 'about'}}
-            <i class="fa fa-comments"></i> <span class="applang5">About</span> <span class="badge alert-success">&#x2713;</span>
+            <i class="fa fa-comments"></i> About <span class="badge alert-success">&#x2713;</span>
           {{/link-to}}
         {{/active-li}}
 		
@@ -54,27 +54,6 @@
                             </a>
                         </li>
 
-                    <li class="dropdown">
-                        <a href="javascript:;">&nbsp;&nbsp;<i class="fa fa-cog"></i>&nbsp;<span class="trlang">Language</span></a>
-                        <ul class="dropdown-content-lang">
-                            <span>
-                                <a class="english" id="english" href="javascript:;" onclick="testch(this.id)">
-									<span class="badge alert-success">English</span>
-                                </a>
-                            </span>
-                            <span>
-                                <a class="russian" id="russian" href="javascript:;" onclick="testch(this.id)">
-									<span class="badge alert-success">Русский</span>
-                                </a>
-                            </span>
-                            <span>
-                                <a class="ukrainian" id="ukrainian" href="javascript:;" onclick="testch(this.id)">
-									<span class="badge alert-success">Українська</span>
-                                </a>
-                            </span>
-                        </ul>
-                    </li>
-						
       </ul>
     </div>
   </div>
