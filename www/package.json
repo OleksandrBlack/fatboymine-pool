@@ -1,7 +1,7 @@
 {
   "name": "fatboymine-pool",
   "version": "0.0.0",
-  "description": "Ethereum Pool",
+  "description": "Ethereum Social Pool",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -42,7 +42,6 @@
     "highcharts": "^6.0.7",
     "loader.js": "^4.0.10",
     "ember-intl": "2.15.1",
-    "ember-cli-cookie": "^0.2.0",
-	"ember-cli-i18n": "https://github.com/DavyJonesLocker/ember-cli-i18n.git"
+    "ember-cli-cookie": "^0.2.0"
   }
 }
