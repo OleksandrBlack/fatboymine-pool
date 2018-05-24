@@ -6,4 +6,23 @@
 	<translation id="applang3">Payments</translation>
 	<translation id="applang4">Miners</translation>
 	<translation id="applang5">About</translation>
+	<translation id="acclang1">Immature Balance:</translation>
+	<translation id="acclang2">Preliminary balance awaiting blocks to mature.</translation>
+	<translation id="acclang3">Pending Balance:</translation>
+	<translation id="acclang4">Credited coins awaiting payout.</translation>
+	<translation id="acclang5">Current Payment:</translation>
+	<translation id="acclang6">Total Paid:</translation>
+	<translation id="acclang7">Last 24h Reward:</translation>
+	<translation id="acclang8">Last Share Submitted:</translation>
+	<translation id="acclang9">Workers Online:</translation>
+	<translation id="acclang10">Hashrate (30m):</translation>
+	<translation id="acclang11">Hashrate (3h):</translation>
+	<translation id="acclang12">Blocks Found:</translation>
+	<translation id="acclang13">Total Payments:</translation>
+	<translation id="acclang14">Your Round Share:</translation>
+	<translation id="acclang15">Percent of your contribution to current round.</translation>
+	<translation id="acclang16">Epoch Switch:</translation>
+	<translation id="acclang17">Workers</translation>
+	<translation id="acclang18">Rewards</translation>
+	<translation id="acclang19">Payouts</translation>
 </translations>
