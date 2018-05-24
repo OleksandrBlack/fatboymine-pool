@@ -20,6 +20,8 @@ module.exports = function(environment) {
       PPLNS: '3000',
       blocksMature: '120',
       minPayouts: '0.05',
+	  
+	  defaultLocale: 'en',
 		
       // API host and port
       ApiUrl: '//eth.fatboymine.com/',
