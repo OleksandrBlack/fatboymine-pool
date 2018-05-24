@@ -210,27 +210,10 @@ h4.note {
     margin-top: -40px;
     margin-left: 10px;
 }
+a:.dropdown-content-lang {
+    color: black;
+}
 
 .dropdown:hover .dropdown-content-lang {
     display: block;
-}
-
-/* unvisited link */
-a:link {
-    color: red;
-}
-
-/* visited link */
-a:visited {
-    color: green;
-}
-
-/* mouse over link */
-a:hover {
-    color: hotpink;
-}
-
-/* selected link */
-a:active {
-    color: blue;
 }
