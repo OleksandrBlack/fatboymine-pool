@@ -19,7 +19,7 @@
         {{/active-li}}
         {{#active-li currentWhen='blocks'}}
           {{#link-to 'blocks'}}
-            <i class="fa fa-cubes"></i> Pool Blocks
+            <i class="fa fa-cubes"></i> <span class="applang2">Pool Blocks</span>
             {{#if immatureTotal}}
               <span class="badge alert-success">{{immatureTotal}}</span>
             {{/if}}
@@ -27,12 +27,12 @@
         {{/active-li}}
         {{#active-li currentWhen='payments'}}
           {{#link-to 'payments'}}
-            <i class="fa fa-paper-plane-o"></i> Payments
+            <i class="fa fa-paper-plane-o"></i> <span class="applang3">Payments</span>
           {{/link-to}}
         {{/active-li}}
         {{#active-li currentWhen='miners'}}
           {{#link-to 'miners'}}
-            <i class="fa fa-users"></i> Miners
+            <i class="fa fa-users"></i> <span class="applang4">Miners</span>
           {{#if model.minersTotal}}
               <span class="badge alert-success">{{model.minersTotal}}</span>
           {{/if}}
@@ -40,7 +40,7 @@
         {{/active-li}}
         {{#active-li currentWhen='about'}}
           {{#link-to 'about'}}
-            <i class="fa fa-comments"></i> About <span class="badge alert-success">&#x2713;</span>
+            <i class="fa fa-comments"></i> <span class="applang5">About</span> <span class="badge alert-success">&#x2713;</span>
           {{/link-to}}
         {{/active-li}}
 		
@@ -59,17 +59,17 @@
                         <ul class="dropdown-content-lang">
                             <li>
                                 <a class="english" id="english" href="javascript:;" onclick="testch(this.id)">
-									English
+									<span class="badge alert-success">English</span>
                                 </a>
                             </li>
                             <li>
                                 <a class="russian" id="russian" href="javascript:;" onclick="testch(this.id)">
-									Русский
+									<span class="badge alert-success">Русский</span>
                                 </a>
                             </li>
                             <li>
                                 <a class="ukrainian" id="ukrainian" href="javascript:;" onclick="testch(this.id)">
-									Українська
+									<span class="badge alert-success">Українська</span>
                                 </a>
                             </li>
                         </ul>

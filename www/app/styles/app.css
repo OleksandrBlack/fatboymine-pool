@@ -207,11 +207,8 @@ h4.note {
     box-shadow: 0px 8px 26px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 1;
-    margin-top: -40px;
+    margin-top: -45px;
     margin-left: 10px;
-}
-a:link .dropdown-content-lang {
-    color: black;
 }
 
 .dropdown:hover .dropdown-content-lang {
