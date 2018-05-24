@@ -26,7 +26,7 @@
 			if(localStorage.getItem('language') != null) {
 				language = localStorage.getItem('language');
 				$.ajax({
-				    url: 'assets/translations/' + language + '.xml',
+				    url: 'translations/' + language + '.xml',
 					success: function(xml) {
 						$(xml).find('translation').each(function(){
 							var id = $(this).attr('id');
@@ -42,7 +42,7 @@
 				localStorage.setItem('language', id);
 				language = id
 				$.ajax({
-					url: 'assets/translations/' + language + '.xml',
+					url: 'translations/' + language + '.xml',
 					success: function(xml) {
 						$(xml).find('translation').each(function(){
 							var id = $(this).attr('id');
