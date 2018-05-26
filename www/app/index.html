@@ -7,52 +7,18 @@
     <title>eth.fatboymine.com - Official Ethereum Mining Pool</title>
 	<meta name="theme-color" content="#1994b8">
     <meta name="description" content="eth.fatboymine.com is a high profitability Ethereum[ETH] mining pool with PPLNS and Multi-tx payout support."/>
-    <meta name="keywords" content="OleksandrBlack, pool, mining, cryptocurrency"/>
+    <meta name="keywords" content="FatBoyMine, pool, mining, cryptocurrency"/>
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="eth.fatboymine.com - Official Ethereum Mining Pool">
     <meta name="twitter:description" content="eth.fatboymine.com is a high profitability Ethereum[ETH] mining pool with PPLNS and Multi-tx payout support.">
-    <meta name="twitter:image" content="https://OleksandrBlack.kr/img/OleksandrBlack-twitter.png">
     <meta property="og:title" content="eth.fatboymine.com - Official Ethereum Mining Pool">
     <meta property="og:site_name" content="eth.fatboymine.com - Official Ethereum Mining Pool">
     <meta property="og:description" content="eth.fatboymine.com is a high profitability Ethereum[ETH] mining pool with PPLNS and Multi-tx payout support.">
-    <meta property="og:image" content="https://OleksandrBlack.kr/img/OleksandrBlack-a.png">
     <link href="https://eth.fatboymine.com" rel="canonical">
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="google-site-verification" content="YEsup9m3fdZ43fp2zISkuLnr_EgtNsX2e2f_RhFMysg" />
     <script src="https://cdn.polyfill.io/v1/polyfill.min.js?features=Intl.~locale.en"></script>
-	   <script>
-		$(document).ready(function() {
-			if(localStorage.getItem('language') != null) {
-				language = localStorage.getItem('language');
-				$.ajax({
-				    url: 'translations/' + language + '.xml',
-					success: function(xml) {
-						$(xml).find('translation').each(function(){
-							var id = $(this).attr('id');
-							var text = $(this).text();
-							$("." + id).html(text);
-						});
-					}
-				});
-			}
-		});
-
-		function testch(id) {
-				localStorage.setItem('language', id);
-				language = id
-				$.ajax({
-					url: 'translations/' + language + '.xml',
-					success: function(xml) {
-						$(xml).find('translation').each(function(){
-							var id = $(this).attr('id');
-							var text = $(this).text();
-							$("." + id).html(text);
-						});
-					}
-				});
-			};
-    </script>
     {{content-for "head"}}
     <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
     <link rel="stylesheet" href="{{rootURL}}assets/fatboymine-pool.css">
@@ -68,7 +34,7 @@
 
     <footer class="footer">
       <div class="container">
-        <center><p class="text-muted"><a href="https://OleksandrBlack.kr" target="_blank">ETH Homepage</a> | <a href="https://wallet.OleksandrBlack.kr" target="_blank">ETH Web Wallet</a> | <a href="https://ropsten.etherscan.io" target="_blank">ETH Blockchain Explorer</a> | <a href="https://stats.OleksandrBlack.kr" target="_blank">ETH Network Dashboard</a> | <a href="https://discord.gg/h6vsEuw" target="_blank">ETH Community Discord</a></p></center>
+        <center><p class="text-muted"><a href="https://fatboymine.com" target="_blank">FatBoyMine Homepage</a> | <a href="https://etherscan.io" target="_blank">ETH Blockchain Explorer</a> | <a href="" target="_blank">FatBoyMine Discord</a></p></center>
       </div>
     </footer>
   </body>

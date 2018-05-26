@@ -6,14 +6,13 @@
           <strong>Ethereum Pool</strong>
         </h1>
         <strong>Min. payout threshold: {{config.PayoutThreshold}}</strong><br/>
-        <span class="label label-success">PROP</span> Stable and profitable pool with regular payouts.<br/>
         <span class="label label-success">PPLNS</span> Real time PPLNS payout scheme.<br/>
         <span class="label label-success">24/365</span> Unstoppable server infrastructure with 24/365 customer support.<br/>
       </div>
       <div class="col-md-3 stats">
         <div><i class="fa fa-users"></i> Miners Online: <span id="poolHashrate">{{format-number stats.model.minersTotal}}</span></div>
         <div><i class="fa fa-tachometer"></i> Pool Hash Rate: <span id="poolHashrate">{{format-hashrate stats.model.hashrate}}</span></div>
-        <div><i class="fa fa-money"></i> Pool Fee: <span id="poolFee" class="label label-success">{{config.PoolFee}}</span><span class="badge badge-secondary">No Fee till June</span></div>
+        <div><i class="fa fa-money"></i> Pool Fee: <span id="poolFee" class="label label-success">{{config.PoolFee}}</span></div>
         {{#if stats.model.stats.lastBlockFound}}
         <div><i class="fa fa-clock-o"></i> Last Block Found: <span>{{format-relative (seconds-to-ms stats.model.stats.lastBlockFound)}}</span></div>
         {{/if}}
@@ -96,11 +95,11 @@
     <h4 class="note note-info text-center">
       <b>Support:</b>
       <br><br>
-      Mail:&nbsp;&nbsp;<a href="mailto:info@OleksandrBlack.kr">info@OleksandrBlack.kr</a>
+      Mail:&nbsp;&nbsp;<a href="mailto:support@fatboymine.com">support@fatboymine.com</a>
       <br>
-      Discord:&nbsp;&nbsp;join <a href="https://discord.gg/h6vsEuw" target="_new">Official Ethereum Social Discord</a>
+      Discord:&nbsp;&nbsp;join <a href="" target="_new">Official FatBoyMine Discord</a>
       <br>
-      <font size="-1">(direct Message to the Pool Operator: @Airking)</font>
+      <font size="-1">(Discord - coming soon)</font>
     </h4>
   </div>
 </div>

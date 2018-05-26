@@ -2,7 +2,6 @@
    <div id="ember568" role="tabpanel" class="ember-view tab-pane active fade in">
       <div class="paper border-top-0">
         <br />
-        <p>Obtain ETSC wallet address at <a href="https://wallet.OleksandrBlack.kr/" target="_blank">https://wallet.OleksandrBlack.kr/</a></p>
         <p>Download <a href="https://github.com/ethereum-mining/ethminer/releases" target="blank">ethminer</a> for you operation system</p>
         <h4><img src="windows.svg" height="20"> Windows</h4>
         <p> Create <code>miner.bat</code> file with following content and run it.</p>
@@ -15,7 +14,7 @@ setx GPU_SINGLE_ALLOC_PERCENT 100
 <kbd>&lt;path to miner&gt;</kbd>/ethminer.exe -F http://eth.fatboymine.com:8888/<kbd>&lt;wallet&gt;</kbd>/<kbd>&lt;worker&gt;</kbd> -G --farm-recheck 200
         </code></pre>
         <p>
-          <code>&lt;wallet&gt;</code> is your ETSC wallet address, example:
+          <code>&lt;wallet&gt;</code> is your {{config.COIN}} wallet address, example:
           <code>0xd34699FD152fe38CAacD3C096F6abb1cd79e88b2</code>.
           <br>
           <code>&lt;worker&gt;</code> is custom name for worker, example : <code>rig01</code>, <code>rig02</code>
@@ -36,7 +35,7 @@ export GPU_SINGLE_ALLOC_PERCENT=100
         </code></pre>
         <p>Make it executable: <code>chmod +x &lt;path to .sh file&gt;</code> and run it</p>
         <p>
-          <code>&lt;wallet&gt;</code> is your ETSC wallet address, example:
+          <code>&lt;wallet&gt;</code> is your {{config.COIN}} wallet address, example:
           <code>0xd34699FD152fe38CAacD3C096F6abb1cd79e88b2</code>.
           <br>
           <code>&lt;worker&gt;</code> is custom name for worker, example : <code>rig01</code>, <code>rig02</code>
