@@ -22,15 +22,15 @@ module.exports = function(environment) {
 
       // HTTP mining endpoint
       HttpHost: 'http://eth.fatboymine.com',
-      2bHttpPort: 8888,
-	  4bHttpPort: 8899,
-	  9bHttpPort: 9999,
+      HttpPort2b: 8888,
+	  HttpPort4b: 8899,
+	  HttpPort9b: 9999,
 
       // Stratum mining endpoint
       StratumHost: 'eth.fatboymine.com',
-      2bStratumPort: 8008,
-	  4bStratumPort: 8009,
-	  9bStratumPort: 9009,
+      StratumPort2b: 8008,
+	  StratumPort4b: 8009,
+	  StratumPort9b: 9009,
 
       // Fee and payout details
       PoolFee: '0.75%',
