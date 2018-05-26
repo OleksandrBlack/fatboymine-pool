@@ -16,28 +16,28 @@ module.exports = function(environment) {
     APP: {
 		
       COIN: 'ETH',
-      CoinName: 'Ethereum',
-      PPLNS: '3000',
-      blocksMature: '120',
-      minPayouts: '0.05',
-		
+      CoinName: 'Ethereum',		
       // API host and port
       ApiUrl: '//eth.fatboymine.com/',
 
       // HTTP mining endpoint
       HttpHost: 'http://eth.fatboymine.com',
-      HttpPort: 8888,
+      2bHttpPort: 8888,
+	  4bHttpPort: 8899,
+	  9bHttpPort: 9999,
 
       // Stratum mining endpoint
       StratumHost: 'eth.fatboymine.com',
-      StratumPort: 8008,
+      2bStratumPort: 8008,
+	  4bStratumPort: 8009,
+	  9bStratumPort: 9009,
 
       // Fee and payout details
-      PoolFee: '0%',
-      PayoutThreshold: '0.5 ETH',
+      PoolFee: '0.75%',
+      PayoutThreshold: '0.05 ETH',
 
       // For network hashrate (change for your favourite fork)
-      BlockTime: 14.4
+      BlockTime: 14.67
     }
   };
 
