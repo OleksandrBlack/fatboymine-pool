@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export function formatExplorer(params /*, hash*/) {
-  var url = 'https://ropsten.etherscan.io/';
+  var url = 'https://etherscan.io/';
   var type = params[0];
   var value = params[1];
   return url + type + '/' + value;
