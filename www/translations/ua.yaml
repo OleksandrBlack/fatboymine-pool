@@ -12,8 +12,10 @@ menu:
   miners: Майнери
   about: Про Нас
   i18n:
-    about: about-ru
-    help: help-ru
+    about: about-ua
+    help: help-ua
+        http: http-ua
+        nice: nice-ua
   language: language
 
 lang:

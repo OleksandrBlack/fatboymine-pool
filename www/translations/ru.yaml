@@ -14,6 +14,8 @@ menu:
   i18n:
     about: about-ru
     help: help-ru
+        http: http-ru
+        nice: nice-ru
   language: language
 
 lang:
@@ -25,7 +27,7 @@ home:
   min_payout_threshold: Min. payout threshold
   payouts_run: Payouts run every {interval}.
   payout_scheme_detail: Stable and profitable pool with regular payouts.
-  miners_online: Майнеров Онлайн
+  miners_online: Майнеры Онлайн
   pool_hashrate: Хешрейт Пула
   pool_fee: Комиссия Пула
   last_block_found: Последний Блок Найден
@@ -53,7 +55,7 @@ account:
     description: Кредитные монеты ожидают выплаты.
   current: Текущий Платеж
   last_share_submitted: Последняя Отправленая Шара
-  online: Воркеров Онлайн
+  online: Воркеры Онлайн
   hashrate: Хешрейт
   earnings:
     perday: Прибыль в день
