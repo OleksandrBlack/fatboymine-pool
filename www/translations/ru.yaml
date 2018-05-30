@@ -12,8 +12,8 @@ menu:
   miners: Майнеры
   about: О Нас
   i18n:
-    about: about
-    help: help
+    about: about-ru
+    help: help-ru
   language: language
 
 lang:
@@ -25,97 +25,99 @@ home:
   min_payout_threshold: Min. payout threshold
   payouts_run: Payouts run every {interval}.
   payout_scheme_detail: Stable and profitable pool with regular payouts.
-  miners_online: Miners Online
-  pool_hashrate: Pool Hash Rate
-  pool_fee: Pool Fee
-  last_block_found: Last Block Found
-  network_difficulty: Network Difficulty
-  network_hashrate: Network Hash Rate
-  blockchain_height: Blockchain Height
+  miners_online: Майнеров Онлайн
+  pool_hashrate: Хешрейт Пула
+  pool_fee: Комиссия Пула
+  last_block_found: Последний Блок Найден
+  network_difficulty: Сложность Сети
+  network_hashrate: Хешрейт Сети
+  blockchain_height: Высота Блокчейна
   current_round_variance: Current Round Variance
 
-  query_history: Your Stats and Payment History
+  query_history: Ваша статистика и  История платежей
   input:
-    enter_your_wallet_address: Enter Your Wallet Address
+    enter_your_wallet_address: Введите Адрес Кошелька
 
   button:
-    lookup: Lookup
+    lookup: Поиск
 
   help:
     minimal: help-minimal
 
 account:
   immature:
-    balance: Immature Balance
-    description: Preliminary balance awaiting blocks to mature.
+    balance: Незрелый Баланс
+    description: Предварительный баланс, ожидающий блоки, чтобы созреть.
   pending:
-    balance: Pending Balance
-    description: Credited coins awaiting payout.
-  current: Current Payment
-  last_share_submitted: Last Share Submitted
-  online: Workers Online
-  hashrate: Hashrate
+    balance: Ожидающий Баланс
+    description: Кредитные монеты ожидают выплаты.
+  current: Текущий Платеж
+  last_share_submitted: Последняя Отправленая Шара
+  online: Воркеров Онлайн
+  hashrate: Хешрейт
   earnings:
-    perday: Earnings per day
-    short_avg: short avg.
+    perday: Прибыль в день
+    short_avg: средний.
   blocks:
-    found: Blocks Found
+    found: Найденные Блоки
   total:
-    payments: Total Payments
-    paid: Total Paid
-  round_share: Your Round Share
-  round_share_description: Percent of your contribution to current round.
-  epoch_switch: Epoch Switch
-  workers: Workers
-  payouts: Payouts
+    payments: Всего Платежей
+    paid: Всего Выплачено
+  round_share: Ваши шары в Раунде
+  round_share_description: Процент вашего вклада в текущий раунд.
+  epoch_switch: Смена Эпохи
+  workers: Воркеры
+  payouts: Платежи
+  rewards: Награды
 
-  your_workers: Workers
-  last_share: Last Share
-  short_average: rough, short average
-  long_average: accurate, long average
-  no_workers_online: No workers online
-  notice: Notice
-  json_api_url: Your bulk stats JSON API URL
+  your_workers: Воркеры
+  last_share: Последняя Шара
+  short_average: грубый, short average
+  long_average: точный, long average
+  no_workers_online: Нет воркеров онлайн
+  notice: Уведомление
+  json_api_url: Ваша основная статистика JSON API URL
 
 payout:
-  latest_payouts: Your Latest Payouts
-  time: Time
+  latest_payouts: Ваши Последние Выплаты
+  time: Время
   txid: Tx ID
-  amount: Amount
-  no_payouts_yet: No payouts yet
+  amount: Количество
+  no_payouts_yet: Пока нет выплат
 
 block:
-  pool_rewards: Pool always pay full block reward including TX fees and uncle rewards.
+  pool_rewards: Пул всегда оплачивает полное вознаграждение за блок, включая оплату транзакции и вознаграждение uncle.
   pool_notice:
-    html: Block maturity requires <em style="text-decoration:underline">up to</em> <span class="label label-success">{success}</span> blocks. Usually it's less indeed.
-  blocks: Blocks
-  immature: Immature
-  new: New Blocks
-  orphan: Orphan
-  no_matured_blocks_yet: No matured blocks yet
-  reward: Reward
-  height: Height
-  hash: Hash
-  time_found: Time Found
-  variance: Share Variance (Shares/Diff)
-  matured: Matured Blocks
-  immature_blocks: Immature Blocks
-  no_immature_blocks_yet: No immature blocks yet
-  no_new_blocks_yet: No new blocks yet
-  recently_found_blocks: Recently Found Blocks
+    html: Блочная зрелость требует <em style="text-decoration:underline">до</em> <span class="label label-success">{success}</span> блоков. Обычно это меньше.
+  blocks: Все
+  immature: Незрелые
+  mature: Зрелые
+  new: Новые
+  orphan: Осиротевший
+  no_matured_blocks_yet: Пока нет зрелых блоков
+  reward: Награда
+  height: Высота
+  hash: Хеш
+  time_found: Время Найдено
+  variance: Разница Шар (Шары/Сложность)
+  matured: Зрелые Блоки
+  immature_blocks: Незрелые Блоки
+  no_immature_blocks_yet: Еще нет незрелых блоков
+  no_new_blocks_yet: Нет новых блоков
+  recently_found_blocks: Недавно найденные блоки
 
 luck:
-  blocks: Blocks
-  shares_diff: Shares/Diff
-  uncle_rate: Uncle Rate
-  orphan_rate: Orphan Rate
+  blocks: Блоки
+  shares_diff: Шары/Сложность
+  uncle_rate: Оценка Uncle
+  orphan_rate: Оценка Осиротевших
 
 payments:
-  pay_tx: Pool always pay tx fees from it's own pocket for now.
-  total_payments_sent: Total payments sent
-  latest_payouts: Latest Payouts
-  time: Time
-  amount: Amount
-  address: Address
+  pay_tx: На данный момент пул всегда платит tx комисию с его собственного кармана.
+  total_payments_sent: Всего отправленных платежей
+  latest_payouts: Последние выплаты
+  time: Время
+  amount: Количество
+  address: Адрес
   txid: Tx ID
-  no_payouts_yet: No payouts yet
+  no_payouts_yet: Пока нет выплат

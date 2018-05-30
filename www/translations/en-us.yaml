@@ -68,6 +68,7 @@ account:
   epoch_switch: Epoch Switch
   workers: Workers
   payouts: Payouts
+  rewards: Rewards
 
   your_workers: Workers
   last_share: Last Share
@@ -88,8 +89,9 @@ block:
   pool_rewards: Pool always pay full block reward including TX fees and uncle rewards.
   pool_notice:
     html: Block maturity requires <em style="text-decoration:underline">up to</em> <span class="label label-success">{success}</span> blocks. Usually it's less indeed.
-  blocks: Blocks
+  blocks: All
   immature: Immature
+  mature: Mature
   new: New Blocks
   orphan: Orphan
   no_matured_blocks_yet: No matured blocks yet

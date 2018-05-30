@@ -1,11 +1,11 @@
-<h4>Recently Found Blocks:</h4>
+<h4>{{t "block.recently_found_blocks"}}:</h4>
 {{#if model.candidates}}
 <table class="table table-condensed table-striped">
   <thead>
     <tr>
-      <th>Height</th>
-      <th>Time Found</th>
-      <th>Variance</th>
+      <th>{{t "block.height"}}</th>
+      <th>{{t "block.time_found"}}</th>
+      <th>{{t "block.variance"}}</th>
     </tr>
   </thead>
   <tbody>
@@ -27,16 +27,16 @@
 {{else}}
 <h3>-</h3>
 {{/if}}
-<h4>Immature Blocks:</h4>
+<h4>{{t "block.immature_blocks"}}:</h4>
 {{#if model.immature}}
 <table class="table table-condensed table-striped">
   <thead>
     <tr>
-      <th>Height</th>
-      <th>Block Hash</th>
-      <th>Time Found</th>
-      <th>Variance</th>
-      <th>Reward</th>
+      <th>{{t "block.height"}}</th>
+      <th>{{t "block.hash"}}</th>
+      <th>{{t "block.time_found"}}</th>
+      <th>{{t "block.variance"}}</th>
+      <th>{{t "block.reward"}}</th>
     </tr>
   </thead>
   <tbody>
@@ -48,16 +48,16 @@
 {{else}}
 <h3>-</h3>
 {{/if}}
-<h4>Matured Blocks:</h4>
+<h4>{{t "block.matured"}}:</h4>
 {{#if model.matured}}
 <table class="table table-condensed table-striped">
   <thead>
     <tr>
-      <th>Height</th>
-      <th>Block Hash</th>
-      <th>Time Found</th>
-      <th>Variance</th>
-      <th>Reward</th>
+      <th>{{t "block.height"}}</th>
+      <th>{{t "block.hash"}}</th>
+      <th>{{t "block.time_found"}}</th>
+      <th>{{t "block.variance"}}</th>
+      <th>{{t "block.reward"}}</th>
     </tr>
   </thead>
   <tbody>
