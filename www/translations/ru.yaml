@@ -59,7 +59,7 @@ account:
   hashrate: Хешрейт
   earnings:
     perday: Прибыль в день
-    short_avg: средний.
+    short_avg: ср.
   blocks:
     found: Найденные Блоки
   total:
@@ -74,8 +74,8 @@ account:
 
   your_workers: Воркеры
   last_share: Последняя Шара
-  short_average: грубый, short average
-  long_average: точный, long average
+  short_average: грубый
+  long_average: точный
   no_workers_online: Нет воркеров онлайн
   notice: Уведомление
   json_api_url: Ваша основная статистика JSON API URL
