@@ -1,0 +1,45 @@
+<div class="tab-content">
+   <div id="ember568" role="tabpanel" class="ember-view tab-pane active fade in">
+      <div class="paper border-top-0">
+         <br />
+		<p>Скачать <a href="https://drive.google.com/drive/folders/0B69wv2iqszefdFZUV2toUG5HdlU" target="blank">Claymore Dual Miner</a> для Вашей операционной системы.</p>
+         <h4><img src="windows.svg" height="20"> Windows</h4>
+         <p>Создать <code>miner.bat</code> файл со следующим содержимым и запустить его.</p>
+         <pre><code>
+setx GPU_FORCE_64BIT_PTR 0
+setx GPU_MAX_HEAP_SIZE 100
+setx GPU_USE_SYNC_OBJECTS 1
+setx GPU_MAX_ALLOC_PERCENT 100
+setx GPU_SINGLE_ALLOC_PERCENT 100
+<kbd>&lt;путь к майнеру&gt;</kbd>/ethdcrminer64.exe -epool eth.fatboymine.com:8008 -ewal <kbd>&lt;кошелек&gt;</kbd> -eworker <kbd>&lt;воркер&gt;</kbd> -epsw x -mode 1
+         </code></pre>
+         <p>
+            <code>&lt;кошелек&gt;</code> Ваш адрес ETH кошелька, пример:
+            <code>0xd34699FD152fe38CAacD3C096F6abb1cd79e88b2</code>.
+            <br>
+            <code>&lt;воркер&gt;</code> это пользовательское имя для воркера, например : <code>rig01</code>, <code>rig02</code>
+         </p>
+      </div>
+      <br />
+      <div class="paper border-top-0">
+         <h4><img src="linux.svg" height="20"> Linux</h4>
+         <p>Создать <code>miner.sh</code> файл со следующим содержимым:</p>
+         <pre><code>
+#!/bin/bash
+export GPU_FORCE_64BIT_PTR=0
+export GPU_MAX_HEAP_SIZE=100
+export GPU_USE_SYNC_OBJECTS=1
+export GPU_MAX_ALLOC_PERCENT=100
+export GPU_SINGLE_ALLOC_PERCENT=100
+<kbd>&lt;путь к майнеру&gt;</kbd>/ethdcrminer64 -epool eth.fatboymine.com:8008 -ewal <kbd>&lt;кошелек&gt;</kbd> -eworker <kbd>&lt;воркер&gt;</kbd> -epsw x -mode 1
+         </code></pre>
+         <p>Сделать его исполняемым: <code>chmod +x &lt;путь к miner.sh file&gt;</code> и запустить его</p>
+         <p>
+            <code>&lt;кошелек&gt;</code> Ваш адрес ETH кошелька, пример:
+            <code>0xd34699FD152fe38CAacD3C096F6abb1cd79e88b2</code>.
+            <br>
+            <code>&lt;воркер&gt;</code> это пользовательское имя для воркера, например : <code>rig01</code>, <code>rig02</code>
+         </p>
+      </div>
+   </div>
+</div>
