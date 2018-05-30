@@ -14,8 +14,8 @@ menu:
   i18n:
     about: about-ru
     help: help-ru
-        getwork: getwork-ru
-        nice: nice-ru
+    getwork: getwork-ru
+    nice: nice-ru
   language: language
 
 lang:

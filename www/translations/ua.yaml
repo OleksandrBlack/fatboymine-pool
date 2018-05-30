@@ -14,8 +14,8 @@ menu:
   i18n:
     about: about-ua
     help: help-ua
-        getwork: getwork-ua
-        nice: nice-ua
+    getwork: getwork-ua
+    nice: nice-ua
   language: language
 
 lang:
