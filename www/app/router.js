@@ -19,17 +19,17 @@ Router.map(function() {
   });
 
   this.route('help', function() {
-    this.route('http');
+    this.route('getwork');
     this.route('nice');
   });
   
   this.route('help-ru', function() {
-    this.route('http-ru');
+    this.route('getwork-ru');
     this.route('nice-ru');
   });
 
   this.route('help-ua', function() {
-    this.route('http-ua');
+    this.route('getwork-ua');
     this.route('nice-ua');
   });
   
