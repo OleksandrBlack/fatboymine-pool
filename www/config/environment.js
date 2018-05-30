@@ -35,8 +35,12 @@ module.exports = function(environment) {
       // Fee and payout details
       PoolFee: '1%',
       PayoutThreshold: '0.05 ETH',
+	  PayoutInterval: '2m',
+      Unit: 'ETH',
+      EtherUnit: 'ETH',
 
       // For network hashrate (change for your favourite fork)
+	  BlockReward: 3,
       BlockTime: 14.67
     }
   };

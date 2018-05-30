@@ -2,8 +2,9 @@ import Ember from 'ember';
 import config from '../config/environment';
 
 export default Ember.Controller.extend({
-  get config() {
-    return config.APP;
+	intl: Ember.inject.service(),
+	get config() {
+		return config.APP;
   },
 
   height: Ember.computed('model.nodes', {
@@ -69,6 +70,23 @@ export default Ember.Controller.extend({
     }
   }),
 
+  // FIXME
+  languages: Ember.computed({
+    get() {
+      let intl = this.get('intl');
+      return [ 
+	  { name: intl.t('lang.english'), value: 'en-us'}, 
+	  { name: intl.t('lang.russian'), value: 'ru'},
+	  { name: intl.t('lang.ukrainian'), value: 'ua'}];
+    }
+  }),
+
+  selectedLanguage: Ember.computed({
+    get() {
+      return Ember.$.cookie('lang');
+    }
+  }),
+  
   roundVariance: Ember.computed('model', {
     get() {
       var percent = this.get('model.stats.roundShares') / this.get('difficulty');

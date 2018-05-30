@@ -6,11 +6,11 @@ product:
 
 menu:
   home: Home
-  help: Help
-  pool_blocks: Pool Blocks
-  payments: Payments
-  miners: Miners
-  about: About
+  help: Помощь
+  pool_blocks: Блоки
+  payments: Выплаты
+  miners: Майнеры
+  about: О Нас
   i18n:
     about: about
     help: help

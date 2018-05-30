@@ -22,10 +22,22 @@ Router.map(function() {
     this.route('http');
     this.route('nice');
   });
+  
+  this.route('help-ru', function() {
+    this.route('http-ru');
+    this.route('nice-ru');
+  });
 
+  this.route('help-ua', function() {
+    this.route('http-ua');
+    this.route('nice-ua');
+  });
+  
   this.route('payments');
   this.route('miners');
   this.route('about');
+  this.route('about-ru');
+  this.route('about-ua');
 });
 
 export default Router;
