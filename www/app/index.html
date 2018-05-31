@@ -31,8 +31,8 @@
         url: "/",
         cache:false,
         success: function(output){ 
-            ping = new Date - (ping / 10);
-            $('.ping').text("Ping " + ping + "ms");
+            ping = new Date - ping;
+            $('.ping').text("Ping " + (ping/10) + "ms");
         }
     });
 	</script>
