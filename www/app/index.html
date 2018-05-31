@@ -27,14 +27,15 @@
 	<script type="text/javascript" >
     var ping = new Date;
 
-    $.ajax({
-        url: "/other/ping.html",
+    $.ajax({ 
+        url: "/",
         cache:false,
         success: function(output){ 
             ping = new Date - ping;
-            Console.log("Ping/Latency: " + ping);
+            $('.ping').text("Ping " + ping + "ms");
         }
     });
+});
 	</script>
   </head>
   <body>
