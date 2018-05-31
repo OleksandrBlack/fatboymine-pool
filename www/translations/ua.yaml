@@ -24,102 +24,102 @@ lang:
   english: English
 
 home:
-  min_payout_threshold: Min. payout threshold
-  payouts_run: Payouts run every {interval}.
-  payout_scheme_detail: Stable and profitable pool with regular payouts.
-  miners_online: Miners Online
-  pool_hashrate: Pool Hash Rate
-  pool_fee: Pool Fee
-  last_block_found: Last Block Found
-  network_difficulty: Network Difficulty
-  network_hashrate: Network Hash Rate
-  blockchain_height: Blockchain Height
-  current_round_variance: Current Round Variance
+  min_payout_threshold: Мінімальний поріг виплат
+  payouts_run: Виплата кожні {interval}.
+  payout_scheme_detail: Стабільний і прибутковий пул з регулярними виплатами.
+  miners_online: Майнерів онлайн
+  pool_hashrate: Хешрейт пула
+  pool_fee: Коміссія пула
+  last_block_found: Останній знайдений блок
+  network_difficulty: Складність Мережі
+  network_hashrate: Хешрейт Мережі
+  blockchain_height: Рівень Блокчейну
+  current_round_variance: Поточне коло розкид
 
-  query_history: Your Stats and Payment History
+  query_history: Ваша статистика та історія платежів
   input:
-    enter_your_wallet_address: Enter Your Wallet Address
+    enter_your_wallet_address: Введіть адресу вашого гаманця
 
   button:
-    lookup: Lookup
+    lookup: Пошук
 
   help:
     minimal: help-minimal
 
 account:
   immature:
-    balance: Immature Balance
-    description: Preliminary balance awaiting blocks to mature.
+    balance: Незрілий Баланс
+    description: Попередній баланс, очікує блоків до зрілості.
   pending:
-    balance: Pending Balance
-    description: Credited coins awaiting payout.
-  current: Current Payment
-  last_share_submitted: Last Share Submitted
-  online: Workers Online
-  hashrate: Hashrate
+    balance: Очікуючий Баланс
+    description: Кредитні монети що очікують виплати.
+  current: Поточний Платіж
+  last_share_submitted: Останнє відправлення Шара
+  online: Воркери Онлайн
+  hashrate: Хешрейт
   earnings:
-    perday: Earnings per day
-    short_avg: short avg.
+    perday: Дохід за день
+    short_avg: ср.
   blocks:
-    found: Blocks Found
+    found: Знайдені Блоки
   total:
-    payments: Total Payments
-    paid: Total Paid
-  round_share: Your Round Share
-  round_share_description: Percent of your contribution to current round.
-  epoch_switch: Epoch Switch
+    payments: Всього Платежів
+    paid: Всього Виплачено
+  round_share: Ваші Шари у Раунді
+  round_share_description: Відсоток вашого вкладу у поточний раунд.
+  epoch_switch: Зміна Епохи
   workers: Воркери
   payouts: Виплати
   rewards: Нагороди
 
-  your_workers: Workers
-  last_share: Last Share
-  short_average: rough, short average
-  long_average: accurate, long average
-  no_workers_online: No workers online
-  notice: Notice
-  json_api_url: Your bulk stats JSON API URL
+  your_workers: Воркері
+  last_share: Остання Шара
+  short_average: грубий, короткий, середній
+  long_average: точний, довгий, середній
+  no_workers_online: Нема Воркерів Онлайн
+  notice: Зверніть увагу
+  json_api_url: Ваша поточна статистика URL-адреси API JSON
 
 payout:
-  latest_payouts: Your Latest Payouts
-  time: Time
+  latest_payouts: Ваші останні виплати
+  time: Час
   txid: Tx ID
-  amount: Amount
-  no_payouts_yet: No payouts yet
+  amount: Сума
+  no_payouts_yet: Виплат ще не було
 
 block:
-  pool_rewards: Pool always pay full block reward including TX fees and uncle rewards.
+  pool_rewards: Пул завжди сплачує повну нагороду за блок, включаючи плату за  TX та нагороду uncle.
   pool_notice:
-    html: Block maturity requires <em style="text-decoration:underline">up to</em> <span class="label label-success">{success}</span> blocks. Usually it's less indeed.
+    html: Блок зрілості вимагає<em style="text-decoration:underline">до</em> <span class="label label-success">{success}</span> Блоків. Зазвичай це менше.
   blocks: Всі
   immature: Незрілі
   mature: Зрілі
   new: Нові
   orphan: Orphan
-  no_matured_blocks_yet: No matured blocks yet
-  reward: Reward
-  height: Height
-  hash: Hash
-  time_found: Time Found
-  variance: Share Variance (Shares/Diff)
-  matured: Matured Blocks
-  immature_blocks: Immature Blocks
-  no_immature_blocks_yet: No immature blocks yet
-  no_new_blocks_yet: No new blocks yet
-  recently_found_blocks: Recently Found Blocks
+  no_matured_blocks_yet: Ще немае готових Блоків
+  reward: Винагорода
+  height: Висота
+  hash: Хеш
+  time_found: Час Знайдено
+  variance: Поділіть варіанти (Shares/Diff)
+  matured: Зріли Блоки
+  immature_blocks: Незрілі Блоки
+  no_immature_blocks_yet: Немає ще незрілих блоків
+  no_new_blocks_yet: Нових Блоків не мае
+  recently_found_blocks: Нещодавно знайдені блоки
 
 luck:
-  blocks: Blocks
-  shares_diff: Shares/Diff
-  uncle_rate: Uncle Rate
-  orphan_rate: Orphan Rate
+  blocks: Блоки
+  shares_diff: Шари/Складність
+  uncle_rate: Оцінка Rate
+  orphan_rate: Осиротівші Rate
 
 payments:
-  pay_tx: Pool always pay tx fees from it's own pocket for now.
-  total_payments_sent: Total payments sent
-  latest_payouts: Latest Payouts
-  time: Time
-  amount: Amount
-  address: Address
+  pay_tx: Пул завжди сплачує повну нагороду за блок, включаючи плату за  TX та нагороду uncle.
+  total_payments_sent: Загальна сума відправлених платежів
+  latest_payouts: Останні виплати
+  time: Час
+  amount: Сума
+  address: Адреса
   txid: Tx ID
-  no_payouts_yet: No payouts yet
+  no_payouts_yet: Немає виплат ще
