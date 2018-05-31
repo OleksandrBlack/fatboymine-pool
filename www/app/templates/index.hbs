@@ -26,10 +26,18 @@
     </div>
   </div>
 </div>
-<button class='test-ping' type="button">Test Ping</button>
-<br/>
-<span class="ping"></span>
 <div class="container">
+<input type="button" id="test" value="Ping these!"/>
+<table>
+    <tr>
+        <td>US</td>
+        <td><div id="statusUS" value="77.120.126.226"></div></td>
+    </tr>
+    <tr>
+        <td>Europe</td>
+        <td><div id="statusEU" value="109.237.93.184"></div></td>
+    </tr>
+</table>
   <div>
   {{high-charts mode=chartMode chartOptions=chartOptions content=chartData}}
   </div>
