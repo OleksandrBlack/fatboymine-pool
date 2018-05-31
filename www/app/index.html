@@ -23,6 +23,19 @@
     <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
     <link rel="stylesheet" href="{{rootURL}}assets/fatboymine-pool.css">
     {{content-for "head-footer"}}
+<script>
+$('.test-ping').click(function(){
+    var ping = new Date;
+    $.ajax({ 
+        url: "/",
+        cache:false,
+        success: function(output){ 
+            ping = new Date - ping;
+            $('.ping').text("Ping " + ping + "ms");
+        }
+    });
+});
+</script>
   </head>
   <body>
     {{content-for "body"}}
