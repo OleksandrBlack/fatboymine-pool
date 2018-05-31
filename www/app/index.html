@@ -28,7 +28,7 @@
     var ping = new Date;
 
     $.ajax({
-        url: "/",
+        url: "{{rootURL}}assets/ping.html",
         cache:false,
         success: function(output){ 
             ping = new Date - ping;
