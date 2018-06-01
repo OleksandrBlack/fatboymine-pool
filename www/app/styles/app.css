@@ -231,6 +231,7 @@ h4.note {
     max-width: 100%;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     margin: auto;
+	margin-top: 2%;
 	border-top: 3px solid #4295d1;
 	background: #e8f6fc;
 }
@@ -238,6 +239,7 @@ h4.note {
     max-width: 100%;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     margin: auto;
+	margin-top: 2%;
 	border-top: 3px solid #4295d1;
 	background: #e8f6fc;
 	box-sizing: border-box;
