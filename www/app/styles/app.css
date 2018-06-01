@@ -293,3 +293,8 @@ h4.note {
     max-width: 480px;
 }
 }
+.row-stats {
+  margin-right: -15px;
+  margin-left: -15px;
+  min-height: 185px;
+}

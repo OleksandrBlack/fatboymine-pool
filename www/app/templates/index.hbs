@@ -6,7 +6,7 @@
 	<div class="col-lg-4">
 		<div class="panel panel-primary">
 			<div class="panel-heading">
-				<div class="row">
+				<div class="row-stats">
 					<div class="panel-body">
 						<h1 style="font-size: 24px">
 							<strong>Ethereum Pool</strong>
@@ -23,7 +23,7 @@
 	<div class="col-lg-3">
 		<div class="panel panel-yellow">
 			<div class="panel-heading">
-				<div class="row">
+				<div class="row-stats">
 					<div class="panel-body">
 						<div><i class="fa fa-users"></i> {{t "home.miners_online"}}: <span id="poolHashrate">{{format-number stats.model.minersTotal}}</span></div>
 						<div><i class="fa fa-tachometer"></i> {{t "home.pool_hashrate"}}: <span id="poolHashrate">{{format-hashrate stats.model.hashrate}}</span></div>
@@ -40,7 +40,7 @@
 	<div class="col-lg-3">
 		<div class="panel panel-green">
 			<div class="panel-heading">
-				<div class="row">
+				<div class="row-stats">
 					<div class="panel-body">
 						<div><i class="fa fa-unlock-alt"></i> {{t "home.network_difficulty"}}: <span>{{with-metric-prefix stats.difficulty}}</span></div>
 						<div><i class="fa fa-tachometer"></i> {{t "home.network_hashrate"}}: <span>{{format-hashrate stats.hashrate}}</span></div>
