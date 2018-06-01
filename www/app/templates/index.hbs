@@ -3,33 +3,43 @@
   <div class="container">
 
     <div class="row">
-      <div class="col-md-5">
+	<div class="col-lg-3 col-md-6">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="panel-body">
         <h1 style="font-size: 24px">
           <strong>Ethereum Pool</strong>
         </h1>
         <strong>Min. payout threshold: {{config.PayoutThreshold}}</strong><br/>
         <span class="label label-success">PPLNS</span> Real time PPLNS payout scheme.<br/>
         <span class="label label-success">24/365</span> Unstoppable server infrastructure with 24/365 customer support.<br/>
-      </div>
-
+						<div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	  
 	<div class="col-lg-3 col-md-6">
-		<div class="panel panel-green">
+		<div class="panel panel-yellow">
 			<div class="panel-heading">
 				<div class="row">
-					<div class="col-xs-9">
+					<div class="panel-body">
 						<div><i class="fa fa-users"></i> {{t "home.miners_online"}}: <span id="poolHashrate">{{format-number stats.model.minersTotal}}</span></div>
 						<div><i class="fa fa-tachometer"></i> {{t "home.pool_hashrate"}}: <span id="poolHashrate">{{format-hashrate stats.model.hashrate}}</span></div>
 						<div><i class="fa fa-money"></i> {{t "home.pool_fee"}}: <span id="poolFee" class="label label-success">{{config.PoolFee}}</span></div>
 						{{#if stats.model.stats.lastBlockFound}}
 							<div><i class="fa fa-clock-o"></i> {{t "home.last_block_found"}}: <span>{{format-relative (seconds-to-ms stats.model.stats.lastBlockFound)}}</span></div>
 						{{/if}}
+						<div></div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="col-lg-3 col-md-6">
-		<div class="panel panel-yellow">
+		<div class="panel panel-green">
 			<div class="panel-heading">
 				<div class="row">
 					<div class="panel-body">
