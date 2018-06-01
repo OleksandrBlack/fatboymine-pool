@@ -221,3 +221,8 @@ h4.note {
     margin: auto; /* Выравниваем таблицу по центру окна  */
 	display:inline-block;
 }
+.layout { position: relative;}
+.layout DIV { position: absolute;}
+.col1 { width: 33%; }
+.col2 { left: 33%; width: 34%; }
+.col3 { right: 0; width: 33%; }
