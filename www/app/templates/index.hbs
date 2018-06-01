@@ -184,6 +184,57 @@
       </tr>
     </table>
 	
+	<table border="0" width="100%">
+      <h4>Connection info</h4>
+      <tr>
+        <td>
+          <h5 class="pings panel table-responsive panel-border">
+            <span class="label label-success">2b</span>&nbsp;<a href="./#/help" title="CLICK FOR HELP"><b>RIG HASHRATE &lt; 150 MH/s</b></a>
+            <br>
+            (difficulty 2 billion)
+            <br><br>
+            <b>Stratum Mining:</b>
+            <br><br>
+            <code>stratum+tcp://{{config.StratumHost}}:{{config.StratumPort2b}}</code>
+            <hr>
+            <b>Getwork Mining:</b>
+            <br><br>
+            <code>{{config.HttpHost}}:{{config.HttpPort2b}}</code>
+          </h5>
+        </td>
+        <td>
+          <h5 class="pings panel table-responsive panel-border">
+            <span class="label label-success">4b</span>&nbsp;<a href="./#/help" title="CLICK FOR HELP"><b>WORKER / NICEHASH 150 - 800 MH/s</b></a>
+            <br>
+            (difficulty 4 billion)
+            <br><br>
+            <b>Stratum Mining:</b>
+            <br><br>
+            <code>stratum+tcp://{{config.StratumHost}}:{{config.StratumPort4b}}</code>
+            <hr>
+            <b>Getwork Mining:</b>
+            <br><br>
+            <code>{{config.HttpHost}}:{{config.HttpPort4b}}</code>
+          </h5>
+        </td>
+        <td>
+          <h5 class="pings panel table-responsive panel-border">
+            <span class="label label-success">9b</span>&nbsp;<a href="./#/help" title="CLICK FOR HELP"><b>WORKER / NICEHASH &gt; 800 MH/s</b></a>
+            <br>
+            (difficulty 9 billion)
+            <br><br>
+            <b>Stratum Mining:</b>
+            <br><br>
+            <code>stratum+tcp://{{config.StratumHost}}:{{config.StratumPort9b}}</code>
+            <hr>
+            <b>Getwork Mining:</b>
+            <br><br>
+            <code>{{config.HttpHost}}:{{config.HttpPort9b}}</code>
+          </h5>
+        </td>
+      </tr>
+    </table>
+	
     <h4 class="note note-info text-center">
       <b>Support:</b>
       <br><br>
