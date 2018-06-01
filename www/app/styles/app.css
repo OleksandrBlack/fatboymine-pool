@@ -294,3 +294,27 @@ h4.note {
     flex: 0 0 33.333333%;
     max-width: 33.333333%;
   }
+  .col-menu2 .col-menu3 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 1200px) {
+  .col-menu2 .col-menu3{
+    float: left;
+  }
+  }
+.col-menu2 {
+    -ms-flex: 0 0 15.833333%;
+    flex: 0 0 15.833333%;
+    max-width: 15.833333%;
+  }
+  
+.col-menu3 {
+    -ms-flex: 0 0 15.833333%;
+    flex: 0 0 15.833333%;
+    max-width: 15.833333%;
+  }
