@@ -283,25 +283,23 @@ h4.note {
   padding-right: 15px;
   padding-left: 15px;
 }
-
 @media (min-width: 1200px) {
-  .col-menu1 .col-menu2 .col-menu3 {
+.col-menu1 .col-menu2 .col-menu3 {
     float: left;
-  }
+}
 .col-menu1 {
-    -ms-flex: 0 0 33.333333%;
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
-  }
-  .col-menu2 {
-    -ms-flex: 0 0 15.833333%;
-    flex: 0 0 15.833333%;
-    max-width: 15.833333%;
-  }
-  
+    -ms-flex: 0 0 480px;
+    flex: 0 0 480px;
+    max-width: 480px;
+}
+.col-menu2 {
+    -ms-flex: 0 0 240px;
+    flex: 0 0 240px;
+    max-width: 240px;
+}
 .col-menu3 {
-    -ms-flex: 0 0 15.833333%;
-    flex: 0 0 15.833333%;
-    max-width: 15.833333%;
-  }
-  }
+    -ms-flex: 0 0 240px;
+    flex: 0 0 240px;
+    max-width: 240px;
+}
+}
