@@ -219,7 +219,9 @@ h4.note {
     width: 250px; /* Ширина таблицы */
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     margin: auto; /* Выравниваем таблицу по центру окна  */
+	display:inline-block;
 }
 .ping {
-	display:inline-block;
+
+	margin:0 auto;
 }
