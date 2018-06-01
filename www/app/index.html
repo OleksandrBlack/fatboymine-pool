@@ -21,17 +21,19 @@
     <script src="https://cdn.polyfill.io/v1/polyfill.min.js?features=Intl.~locale.en"></script>
 	<script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
 	    <script type="text/javascript">  
-        $(document).ready(function(){
-            $("#report tr:odd").addClass("odd");
-            $("#report tr:not(.odd)").hide();
-            $("#report tr:first-child").show();
-            
-            $("#report tr.odd").click(function(){
-                $(this).next("tr").toggle();
-                $(this).find(".arrow").toggleClass("up");
-            });
-            //$("#report").jExpand();
-        });
+	$('.faq_item_title_inner').on('click',function(){
+        $(this).parents('.faq_item').find('.faq_item_body').slideToggle(300);
+        $(this).toggleClass('open');
+        if ($(this).hasClass('show_all')){
+                if ($(this).hasClass('open')) {
+                    $(this).html('Свернуть все');
+                $('.faq_item_title_inner:not(.open)').trigger('click');
+            } else {
+                $(this).html('Смотреть все');
+                $('.faq_item_title_inner.open').trigger('click');
+            }
+        }
+    });
     </script> 
     {{content-for "head"}}
     <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
