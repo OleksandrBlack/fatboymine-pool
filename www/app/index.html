@@ -19,22 +19,8 @@
     <meta name="googlebot" content="index,follow">
     <meta name="google-site-verification" content="YEsup9m3fdZ43fp2zISkuLnr_EgtNsX2e2f_RhFMysg" />
     <script src="https://cdn.polyfill.io/v1/polyfill.min.js?features=Intl.~locale.en"></script>
-	<script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
-	    <script type="text/javascript">  
-	$('.faq_item_title_inner').on('click',function(){
-        $(this).parents('.faq_item').find('.faq_item_body').slideToggle(300);
-        $(this).toggleClass('open');
-        if ($(this).hasClass('show_all')){
-                if ($(this).hasClass('open')) {
-                    $(this).html('Свернуть все');
-                $('.faq_item_title_inner:not(.open)').trigger('click');
-            } else {
-                $(this).html('Смотреть все');
-                $('.faq_item_title_inner.open').trigger('click');
-            }
-        }
-    });
-    </script> 
+
+
     {{content-for "head"}}
     <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
     <link rel="stylesheet" href="{{rootURL}}assets/fatboymine-pool.css">
