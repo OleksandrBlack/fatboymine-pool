@@ -276,7 +276,7 @@ h4.note {
   color: #df8a13;
 }
 
-.col-menu1 .col-menu2 .col-menu3 {
+.col-lg-4 {
   position: relative;
   width: 100%;
   min-height: 1px;
@@ -284,22 +284,12 @@ h4.note {
   padding-left: 15px;
 }
 @media (min-width: 1200px) {
-.col-menu1 .col-menu2 .col-menu3 {
+.col-lg-4 {
     float: left;
 }
-.col-menu1 {
+.col-lg-4 {
     -ms-flex: 0 0 480px;
     flex: 0 0 480px;
     max-width: 480px;
-}
-.col-menu2 {
-    -ms-flex: 0 0 240px;
-    flex: 0 0 240px;
-    max-width: 240px;
-}
-.col-menu3 {
-    -ms-flex: 0 0 240px;
-    flex: 0 0 240px;
-    max-width: 240px;
 }
 }
