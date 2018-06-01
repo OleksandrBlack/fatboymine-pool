@@ -5,15 +5,11 @@
     <div class="row">
 
 	 
-<div class="col-lg-4">
+<div class="col-lg-5">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            Primary Panel
                         </div>
                         <div class="panel-body">
-						<h1 style="font-size: 24px">
-							<strong>Ethereum Pool</strong>
-						</h1>
 						<strong>Min. payout threshold: {{config.PayoutThreshold}}</strong><br/>
 						<span class="label label-success">PPLNS</span> Real time PPLNS payout scheme.<br/>
 						<span class="label label-success">24/365</span> Unstoppable server infrastructure with 24/365 customer support.<br/>
@@ -21,10 +17,9 @@
                     </div>
                 </div>
 
-<div class="col-lg-4">
+<div class="col-lg-3">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            Primary Panel
                         </div>
                         <div class="panel-body">
 						<div><i class="fa fa-users"></i> {{t "home.miners_online"}}: <span id="poolHashrate">{{format-number stats.model.minersTotal}}</span></div>
@@ -37,10 +32,9 @@
                     </div>
                 </div>
 				
-<div class="col-lg-4">
+<div class="col-lg-3">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            Primary Panel
                         </div>
                         <div class="panel-body">
 						<div><i class="fa fa-unlock-alt"></i> {{t "home.network_difficulty"}}: <span>{{with-metric-prefix stats.difficulty}}</span></div>
