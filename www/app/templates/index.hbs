@@ -62,6 +62,94 @@
 
 <div class="container">
 
+
+
+
+		<!--<div class="ping">
+<table border="0" width="100%" class="table table-condensed table-striped">
+		<thead>
+		  <tr>
+			<th>Country</th>
+			<th></th>
+			<th>Ping to Pool</th>
+		  </tr>
+		</thead>
+<tbody>
+		  <tr>
+			<td>Latvia</td>
+			<td></td>
+			<td><span class="label label-success">15-21 ms</span></td>
+			<td></td>
+		  </tr>
+
+		  <tr>
+			<td>Lithuania</td>
+			<td></td>
+			<td><span class="label label-success">15-21 ms</span></td>
+			<td></td>
+		  </tr>
+
+		  <tr>
+			<td>Russia</td>
+			<td></td>
+			<td><span class="label label-success">17-45 ms</span></td>
+			<td></td>
+		  </tr>
+</tbody>
+</table>
+	  </div>
+
+		<div class="ping">
+<table border="0" width="100%" class="table table-condensed table-striped">
+		<thead>
+		  <tr>
+			<th>Country</th>
+			<th></th>
+			<th>Ping to Pool</th>
+		  </tr>
+		</thead>
+<tbody>
+		  <tr>
+			<td>Belarus</td>
+			<td></td>
+			<td><span class="label label-success">17-45 ms</span></td>
+			<td></td>
+		  </tr>
+
+		  <tr>
+			<td>Germany</td>
+			<td></td>
+			<td><span class="label label-success">30-60 ms</span></td>
+			<td></td>
+		  </tr>
+
+		  <tr>
+			<td>Georgia</td>
+			<td></td>
+			<td><span class="label label-success">50-60 ms</span></td>
+			<td></td>
+		  </tr>
+</tbody>
+</table>
+	  </div>-->
+	  </div>
+  <div>
+  {{high-charts mode=chartMode chartOptions=chartOptions content=chartData}}
+  </div>
+  <div class="stats">
+    <h4>{{t "home.query_history"}}</h4>
+    <div class="input-group">
+      {{input value=cachedLogin class="form-control" placeholder=(t "home.input.enter_your_wallet_address")}}
+      <span class="input-group-btn">
+        <button class="btn btn-primary" type="button" {{action 'lookup' cachedLogin}}>
+          <span style="display: inline;"><i class="fa fa-search"></i> {{t "home.button.lookup"}}</span>
+        </button>
+      </span>
+    </div>
+  </div>
+  <div>
+
+      <h4>Connection info</h4>
 <div class="main">
 
 <div class="ping">
@@ -163,116 +251,8 @@
                     </div>
                     <!-- /.panel -->
                 </div>
-
-
-		<!--<div class="ping">
-<table border="0" width="100%" class="table table-condensed table-striped">
-		<thead>
-		  <tr>
-			<th>Country</th>
-			<th></th>
-			<th>Ping to Pool</th>
-		  </tr>
-		</thead>
-<tbody>
-		  <tr>
-			<td>Latvia</td>
-			<td></td>
-			<td><span class="label label-success">15-21 ms</span></td>
-			<td></td>
-		  </tr>
-
-		  <tr>
-			<td>Lithuania</td>
-			<td></td>
-			<td><span class="label label-success">15-21 ms</span></td>
-			<td></td>
-		  </tr>
-
-		  <tr>
-			<td>Russia</td>
-			<td></td>
-			<td><span class="label label-success">17-45 ms</span></td>
-			<td></td>
-		  </tr>
-</tbody>
-</table>
-	  </div>
-
-		<div class="ping">
-<table border="0" width="100%" class="table table-condensed table-striped">
-		<thead>
-		  <tr>
-			<th>Country</th>
-			<th></th>
-			<th>Ping to Pool</th>
-		  </tr>
-		</thead>
-<tbody>
-		  <tr>
-			<td>Belarus</td>
-			<td></td>
-			<td><span class="label label-success">17-45 ms</span></td>
-			<td></td>
-		  </tr>
-
-		  <tr>
-			<td>Germany</td>
-			<td></td>
-			<td><span class="label label-success">30-60 ms</span></td>
-			<td></td>
-		  </tr>
-
-		  <tr>
-			<td>Georgia</td>
-			<td></td>
-			<td><span class="label label-success">50-60 ms</span></td>
-			<td></td>
-		  </tr>
-</tbody>
-</table>
-	  </div>-->
-	  </div>
-  <div>
-  {{high-charts mode=chartMode chartOptions=chartOptions content=chartData}}
-  </div>
-  <div class="stats">
-    <h4>{{t "home.query_history"}}</h4>
-    <div class="input-group">
-      {{input value=cachedLogin class="form-control" placeholder=(t "home.input.enter_your_wallet_address")}}
-      <span class="input-group-btn">
-        <button class="btn btn-primary" type="button" {{action 'lookup' cachedLogin}}>
-          <span style="display: inline;"><i class="fa fa-search"></i> {{t "home.button.lookup"}}</span>
-        </button>
-      </span>
-    </div>
-  </div>
-  <div>
-
-      <h4>Connection info</h4>
-
 <br>
 <div class="main">
-<div class="col-lg-4">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            Primary Panel
-                        </div>
-                        <div class="panel-body">
-            <span class="label label-success">2b</span>&nbsp;<a href="./#/help" title="CLICK FOR HELP"><b>RIG HASHRATE &lt; 150 MH/s</b></a>
-            <br>
-            (difficulty 2 billion)
-            <br><br>
-            <b>Stratum Mining:</b>
-            <br><br>
-            <code>stratum+tcp://{{config.StratumHost}}:{{config.StratumPort2b}}</code>
-            <hr>
-            <b>Getwork Mining:</b>
-            <br><br>
-            <code>{{config.HttpHost}}:{{config.HttpPort2b}}</code>
-						</div>
-                    </div>
-                </div>
 		<div class="conect">
 <table border="0" width="100%">
       <tr>
