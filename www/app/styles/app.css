@@ -214,14 +214,6 @@ h4.note {
 .dropdown:hover .dropdown-content-lang {
     display: block;
 }
-
-.shadow {
-    max-width: 100%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    margin: auto;
-	border-top: 3px solid #4295d1;
-	background: #e8f6fc;
-}
 .main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -234,4 +226,20 @@ h4.note {
   
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+.ping {
+    max-width: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin: auto;
+	border-top: 3px solid #4295d1;
+	background: #e8f6fc;
+}
+.conect {
+    max-width: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin: auto;
+	border-top: 3px solid #4295d1;
+	background: #e8f6fc;
+	box-sizing: border-box;
+    padding: 20px;
 }
