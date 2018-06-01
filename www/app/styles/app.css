@@ -276,7 +276,7 @@ h4.note {
   color: #df8a13;
 }
 
-.col-menu1 {
+.col-menu1 .col-menu2 .col-menu3 {
   position: relative;
   width: 100%;
   min-height: 1px;
@@ -285,29 +285,15 @@ h4.note {
 }
 
 @media (min-width: 1200px) {
-  .col-menu1 {
+  .col-menu1 .col-menu2 .col-menu3 {
     float: left;
-  }
   }
 .col-menu1 {
     -ms-flex: 0 0 33.333333%;
     flex: 0 0 33.333333%;
     max-width: 33.333333%;
   }
-  .col-menu2 .col-menu3 {
-  position: relative;
-  width: 100%;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-@media (min-width: 1200px) {
-  .col-menu2 .col-menu3{
-    float: left;
-  }
-  }
-.col-menu2 {
+  .col-menu2 {
     -ms-flex: 0 0 15.833333%;
     flex: 0 0 15.833333%;
     max-width: 15.833333%;
@@ -317,4 +303,5 @@ h4.note {
     -ms-flex: 0 0 15.833333%;
     flex: 0 0 15.833333%;
     max-width: 15.833333%;
+  }
   }
