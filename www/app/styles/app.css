@@ -216,9 +216,9 @@ h4.note {
 }
 
 .shadow {
-    width: 200px; /* Ширина таблицы */
+    max-width: 100%;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    margin: auto; /* Выравниваем таблицу по центру окна  */
+    margin: auto;
 }
 .main {
   display: -webkit-box;
