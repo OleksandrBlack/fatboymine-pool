@@ -214,3 +214,9 @@ h4.note {
 .dropdown:hover .dropdown-content-lang {
     display: block;
 }
+
+.pings {
+    width: 300px; /* Ширина таблицы */
+    border: 1px solid green; /* Рамка вокруг таблицы */
+    margin: auto; /* Выравниваем таблицу по центру окна  */
+}
