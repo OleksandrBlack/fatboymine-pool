@@ -215,14 +215,11 @@ h4.note {
     display: block;
 }
 
-.pings {
+.shadow {
     width: 250px; /* Ширина таблицы */
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     margin: auto; /* Выравниваем таблицу по центру окна  */
+}
+.ping {
 	display:inline-block;
 }
-.layout { position: relative;}
-.layout DIV { position: absolute;}
-.col1 { width: 33%; }
-.col2 { left: 33%; width: 34%; }
-.col3 { right: 0; width: 33%; }
