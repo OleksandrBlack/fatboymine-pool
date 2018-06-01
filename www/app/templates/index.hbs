@@ -1,7 +1,7 @@
 <div class="jumbotron">
   <div class="container">
     <div class="row">
-      <div class="col-md-5 pings">
+      <div class="col-md-5">
         <h1 style="font-size: 24px">
           <strong>Ethereum Pool</strong>
         </h1>
@@ -9,7 +9,7 @@
         <span class="label label-success">PPLNS</span> Real time PPLNS payout scheme.<br/>
         <span class="label label-success">24/365</span> Unstoppable server infrastructure with 24/365 customer support.<br/>
       </div>
-      <div class="col-md-3 stats pings">
+      <div class="col-md-3 stats">
         <div><i class="fa fa-users"></i> {{t "home.miners_online"}}: <span id="poolHashrate">{{format-number stats.model.minersTotal}}</span></div>
         <div><i class="fa fa-tachometer"></i> {{t "home.pool_hashrate"}}: <span id="poolHashrate">{{format-hashrate stats.model.hashrate}}</span></div>
         <div><i class="fa fa-money"></i> {{t "home.pool_fee"}}: <span id="poolFee" class="label label-success">{{config.PoolFee}}</span></div>
@@ -17,7 +17,7 @@
         <div><i class="fa fa-clock-o"></i> {{t "home.last_block_found"}}: <span>{{format-relative (seconds-to-ms stats.model.stats.lastBlockFound)}}</span></div>
         {{/if}}
       </div>
-      <div class="col-md-4 stats pings">
+      <div class="col-md-4 stats">
         <div><i class="fa fa-unlock-alt"></i> {{t "home.network_difficulty"}}: <span>{{with-metric-prefix stats.difficulty}}</span></div>
         <div><i class="fa fa-tachometer"></i> {{t "home.network_hashrate"}}: <span>{{format-hashrate stats.hashrate}}</span></div>
         <div><i class="fa fa-bars"></i> {{t "home.blockchain_height"}}: <span>{{format-number stats.height}}</span></div>
@@ -56,6 +56,21 @@
 			<td><span class="label label-success">20-28 ms</span></td>
 			<td></td>
 		  </tr>
+		</tbody>
+	  </table>
+	</div>
+
+
+<div class="panel table-responsive panel-border">
+		<table border="0" width="100%" class="table table-condensed table-striped">
+		<thead>
+		  <tr>
+			<th>Country</th>
+			<th></th>
+			<th>Ping to Pool</th>
+		  </tr>
+		</thead>
+		<tbody>
 		  <tr>
 			<td>Latvia</td>
 			<td></td>
@@ -74,6 +89,21 @@
 			<td><span class="label label-success">17-45 ms</span></td>
 			<td></td>
 		  </tr>
+		</tbody>
+	  </table>
+	</div>
+
+
+<div class="panel table-responsive panel-border">
+		<table border="0" width="100%" class="table table-condensed table-striped">
+		<thead>
+		  <tr>
+			<th>Country</th>
+			<th></th>
+			<th>Ping to Pool</th>
+		  </tr>
+		</thead>
+		<tbody>
 		  <tr>
 			<td>Belarus</td>
 			<td></td>
@@ -90,12 +120,6 @@
 			<td>Georgia</td>
 			<td></td>
 			<td><span class="label label-success">50-60 ms</span></td>
-			<td></td>
-		  </tr>
-		  <tr>
-			<td>Kazakhstan</td>
-			<td></td>
-			<td><span class="label label-success">50-66 ms</span></td>
 			<td></td>
 		  </tr>
 		</tbody>
