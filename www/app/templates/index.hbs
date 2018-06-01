@@ -27,71 +27,6 @@
   </div>
 </div>
 <div class="container">
-  <div>
-  {{high-charts mode=chartMode chartOptions=chartOptions content=chartData}}
-  </div>
-  <div class="stats">
-    <h4>{{t "home.query_history"}}</h4>
-    <div class="input-group">
-      {{input value=cachedLogin class="form-control" placeholder=(t "home.input.enter_your_wallet_address")}}
-      <span class="input-group-btn">
-        <button class="btn btn-primary" type="button" {{action 'lookup' cachedLogin}}>
-          <span style="display: inline;"><i class="fa fa-search"></i> {{t "home.button.lookup"}}</span>
-        </button>
-      </span>
-    </div>
-  </div>
-  <div>
-    <table border="0" width="100%">
-      <h4>Connection info</h4>
-      <tr>
-        <td>
-          <h5 class="note note-info text-center">
-            <span class="label label-success">2b</span>&nbsp;<a href="./#/help" title="CLICK FOR HELP"><b>RIG HASHRATE &lt; 150 MH/s</b></a>
-            <br>
-            (difficulty 2 billion)
-            <br><br>
-            <b>Stratum Mining:</b>
-            <br><br>
-            <code>stratum+tcp://{{config.StratumHost}}:{{config.StratumPort2b}}</code>
-            <hr>
-            <b>Getwork Mining:</b>
-            <br><br>
-            <code>{{config.HttpHost}}:{{config.HttpPort2b}}</code>
-          </h5>
-        </td>
-        <td>
-          <h5 class="note note-info text-center">
-            <span class="label label-success">4b</span>&nbsp;<a href="./#/help" title="CLICK FOR HELP"><b>WORKER / NICEHASH 150 - 800 MH/s</b></a>
-            <br>
-            (difficulty 4 billion)
-            <br><br>
-            <b>Stratum Mining:</b>
-            <br><br>
-            <code>stratum+tcp://{{config.StratumHost}}:{{config.StratumPort4b}}</code>
-            <hr>
-            <b>Getwork Mining:</b>
-            <br><br>
-            <code>{{config.HttpHost}}:{{config.HttpPort4b}}</code>
-          </h5>
-        </td>
-        <td>
-          <h5 class="note note-info text-center">
-            <span class="label label-success">9b</span>&nbsp;<a href="./#/help" title="CLICK FOR HELP"><b>WORKER / NICEHASH &gt; 800 MH/s</b></a>
-            <br>
-            (difficulty 9 billion)
-            <br><br>
-            <b>Stratum Mining:</b>
-            <br><br>
-            <code>stratum+tcp://{{config.StratumHost}}:{{config.StratumPort9b}}</code>
-            <hr>
-            <b>Getwork Mining:</b>
-            <br><br>
-            <code>{{config.HttpHost}}:{{config.HttpPort9b}}</code>
-          </h5>
-        </td>
-      </tr>
-    </table>
 <div class="pings">
 	<div class="panel table-responsive panel-border">
 		<table border="0" width="100%" class="table table-condensed table-striped">
@@ -166,7 +101,73 @@
 		</tbody>
 	  </table>
 	</div>
-</div>	
+</div>
+  <div>
+  {{high-charts mode=chartMode chartOptions=chartOptions content=chartData}}
+  </div>
+  <div class="stats">
+    <h4>{{t "home.query_history"}}</h4>
+    <div class="input-group">
+      {{input value=cachedLogin class="form-control" placeholder=(t "home.input.enter_your_wallet_address")}}
+      <span class="input-group-btn">
+        <button class="btn btn-primary" type="button" {{action 'lookup' cachedLogin}}>
+          <span style="display: inline;"><i class="fa fa-search"></i> {{t "home.button.lookup"}}</span>
+        </button>
+      </span>
+    </div>
+  </div>
+  <div>
+    <table border="0" width="100%">
+      <h4>Connection info</h4>
+      <tr>
+        <td>
+          <h5 class="note note-info text-center">
+            <span class="label label-success">2b</span>&nbsp;<a href="./#/help" title="CLICK FOR HELP"><b>RIG HASHRATE &lt; 150 MH/s</b></a>
+            <br>
+            (difficulty 2 billion)
+            <br><br>
+            <b>Stratum Mining:</b>
+            <br><br>
+            <code>stratum+tcp://{{config.StratumHost}}:{{config.StratumPort2b}}</code>
+            <hr>
+            <b>Getwork Mining:</b>
+            <br><br>
+            <code>{{config.HttpHost}}:{{config.HttpPort2b}}</code>
+          </h5>
+        </td>
+        <td>
+          <h5 class="note note-info text-center">
+            <span class="label label-success">4b</span>&nbsp;<a href="./#/help" title="CLICK FOR HELP"><b>WORKER / NICEHASH 150 - 800 MH/s</b></a>
+            <br>
+            (difficulty 4 billion)
+            <br><br>
+            <b>Stratum Mining:</b>
+            <br><br>
+            <code>stratum+tcp://{{config.StratumHost}}:{{config.StratumPort4b}}</code>
+            <hr>
+            <b>Getwork Mining:</b>
+            <br><br>
+            <code>{{config.HttpHost}}:{{config.HttpPort4b}}</code>
+          </h5>
+        </td>
+        <td>
+          <h5 class="note note-info text-center">
+            <span class="label label-success">9b</span>&nbsp;<a href="./#/help" title="CLICK FOR HELP"><b>WORKER / NICEHASH &gt; 800 MH/s</b></a>
+            <br>
+            (difficulty 9 billion)
+            <br><br>
+            <b>Stratum Mining:</b>
+            <br><br>
+            <code>stratum+tcp://{{config.StratumHost}}:{{config.StratumPort9b}}</code>
+            <hr>
+            <b>Getwork Mining:</b>
+            <br><br>
+            <code>{{config.HttpHost}}:{{config.HttpPort9b}}</code>
+          </h5>
+        </td>
+      </tr>
+    </table>
+	
     <h4 class="note note-info text-center">
       <b>Support:</b>
       <br><br>
