@@ -13,6 +13,8 @@
 						<strong>Min. payout threshold: {{config.PayoutThreshold}}</strong><br/>
 						<span class="label label-success">PPLNS</span> Real time PPLNS payout scheme.<br/>
 						<span class="label label-success">24/365</span> Unstoppable server infrastructure with 24/365 customer support.<br/>
+                        <div class="panel-heading">
+                        </div>
 						</div>
                     </div>
                 </div>
@@ -28,6 +30,8 @@
 						{{#if stats.model.stats.lastBlockFound}}
 							<div><i class="fa fa-clock-o"></i> {{t "home.last_block_found"}}: <span>{{format-relative (seconds-to-ms stats.model.stats.lastBlockFound)}}</span></div>
 						{{/if}}
+                        <div class="panel-heading">
+                        </div>
 						</div>
                     </div>
                 </div>
@@ -41,7 +45,8 @@
 						<div><i class="fa fa-tachometer"></i> {{t "home.network_hashrate"}}: <span>{{format-hashrate stats.hashrate}}</span></div>
 						<div><i class="fa fa-bars"></i> {{t "home.blockchain_height"}}: <span>{{format-number stats.height}}</span></div>
 						<div><i class="fa fa-clock-o"></i> {{t "home.current_round_variance"}}: <span>{{format-number stats.roundVariance style='percent'}}</span></div>
-					
+                        <div class="panel-heading">
+                        </div>
 						</div>
                     </div>
                 </div>
