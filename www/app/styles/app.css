@@ -284,6 +284,11 @@ h4.note {
   padding-left: 15px;
 }
 
+@media (min-width: 1200px) {
+  .col-menu1 {
+    float: left;
+  }
+
 .col-menu1 {
     -ms-flex: 0 0 33.333333%;
     flex: 0 0 33.333333%;
