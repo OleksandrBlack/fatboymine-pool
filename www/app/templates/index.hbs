@@ -30,6 +30,27 @@
 </div>
 </div>
 
+
+
+<div class="container">
+
+<div>
+  {{high-charts mode=chartMode chartOptions=chartOptions content=chartData}}
+  </div>
+  <div class="stats">
+    <h4>{{t "home.query_history"}}</h4>
+    <div class="input-group">
+      {{input value=cachedLogin class="form-control" placeholder=(t "home.input.enter_your_wallet_address")}}
+      <span class="input-group-btn">
+        <button class="btn btn-primary" type="button" {{action 'lookup' cachedLogin}}>
+          <span style="display: inline;"><i class="fa fa-search"></i> {{t "home.button.lookup"}}</span>
+        </button>
+      </span>
+    </div>
+  </div>
+  <div>
+
+      <h4>Connection info</h4>
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-4">
@@ -154,131 +175,6 @@
 		</div>
 	</div>
 </div>
-
-<div class="container">
-
-<div>
-  {{high-charts mode=chartMode chartOptions=chartOptions content=chartData}}
-  </div>
-  <div class="stats">
-    <h4>{{t "home.query_history"}}</h4>
-    <div class="input-group">
-      {{input value=cachedLogin class="form-control" placeholder=(t "home.input.enter_your_wallet_address")}}
-      <span class="input-group-btn">
-        <button class="btn btn-primary" type="button" {{action 'lookup' cachedLogin}}>
-          <span style="display: inline;"><i class="fa fa-search"></i> {{t "home.button.lookup"}}</span>
-        </button>
-      </span>
-    </div>
-  </div>
-  <div>
-
-      <h4>Connection info</h4>
-<div class="main">
-
-<div class="ping">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <div class="table-responsive">
-                                <table class="table table-striped table-bordered table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th>Country</th>
-                                            <th>Ping to Pool</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Ukraine</td>
-                                            <td><span class="label label-success">0-10 ms</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Poland</td>
-                                            <td><span class="label label-success">5-13 ms</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Moldova</td>
-                                            <td><span class="label label-success">20-28 ms</span></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- /.table-responsive -->
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-<div class="ping">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <div class="table-responsive">
-                                <table class="table table-striped table-bordered table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th>Country</th>
-                                            <th>Ping to Pool</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Ukraine</td>
-                                            <td><span class="label label-success">0-10 ms</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Poland</td>
-                                            <td><span class="label label-success">5-13 ms</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Moldova</td>
-                                            <td><span class="label label-success">20-28 ms</span></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- /.table-responsive -->
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-				<div class="ping">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <div class="table-responsive">
-                                <table class="table table-striped table-bordered table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th>Country</th>
-                                            <th>Ping to Pool</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Ukraine</td>
-                                            <td><span class="label label-success">0-10 ms</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Poland</td>
-                                            <td><span class="label label-success">5-13 ms</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Moldova</td>
-                                            <td><span class="label label-success">20-28 ms</span></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- /.table-responsive -->
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-
-
-		
-	  </div>
 
 <br>
 <div class="main">
