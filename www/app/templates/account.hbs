@@ -3,9 +3,10 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-4">
-			<div class="panel panel-primary panel-body">
 			<div class="panel-heading">
             </div>
+			<div class="panel panel-primary panel-body">
+
 				<div style="display: block;">
 					<i class="fa fa-cloud"></i> {{t "account.immature.balance"}}: <span><b>{{format-balance model.stats.immature}}</b></span><br>
 					<small>{{t "account.immature.description"}}</small>
@@ -21,9 +22,10 @@
 				{{/if}}
 				<div style="display: block;"><i class="fa fa-money"></i> {{t "account.total.paid"}}: <span>{{format-balance model.stats.paid}}</span>
 				</div>
+
+			</div>
 			<div class="panel-heading">
             </div>
-			</div>
 		</div>
 		<div class="col-md-4">
 			<div class="panel panel-primary panel-body">
