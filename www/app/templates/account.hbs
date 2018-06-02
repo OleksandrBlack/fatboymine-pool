@@ -3,10 +3,7 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-4">
-			<div class="panel-heading">
-            </div>
 			<div class="panel panel-primary panel-body">
-
 				<div style="display: block;">
 					<i class="fa fa-cloud"></i> {{t "account.immature.balance"}}: <span><b>{{format-balance model.stats.immature}}</b></span><br>
 					<small>{{t "account.immature.description"}}</small>
@@ -20,46 +17,35 @@
 					<i class="fa fa-clock-o"></i> {{t "account.current"}}: <span><b>{{format-balance model.stats.pending}}</b></span><br>
 				</div>
 				{{/if}}
-				<div style="display: block;"><i class="fa fa-money"></i> {{t "account.total.paid"}}: <span>{{format-balance model.stats.paid}}</span>
+				<div style="display: block;"><i class="fa fa-money"></i> {{t "account.total.paid"}}: <span><b>{{format-balance model.stats.paid}}</b></span>
 				</div>
-
 			</div>
-			<div class="panel-heading">
-            </div>
 		</div>
 		<div class="col-md-4">
 			<div class="panel panel-primary panel-body">
-			<div class="panel-heading">
-            </div>
 			{{#if model.stats.lastShare}}
 				<div style="display: block;"><i class="fa fa-clock-o"></i>
 					{{t "account.last_share_submitted"}}: <span>{{format-relative (seconds-to-ms (string-to-int model.stats.lastShare))}}</span>
 				</div>
 			{{/if}}
-				<div style="display: block;"><i class="fa fa-gears"></i> {{t "account.online"}}: <span>{{format-number model.workersOnline}}</span></div>
-				<div style="display: block;"><i class="fa fa-tachometer"></i> {{t "account.hashrate"}} (30m): <span>{{format-hashrate model.currentHashrate}}</span></div>
-				<div style="display: block;"><i class="fa fa-tachometer"></i> {{t "account.hashrate"}} (3h): <span>{{format-hashrate model.hashrate}}</span></div>
-				<div style="display: block;"><i class="fa fa-calculator"></i> {{t "account.earnings.perday"}} (3h avg): <span>{{format-number earnPerDay}} {{config.Unit}}</span></div>
-			<div class="panel-heading">
-            </div>
+				<div style="display: block;"><i class="fa fa-gears"></i> {{t "account.online"}}: <span><b>{{format-number model.workersOnline}}</b></span></div>
+				<div style="display: block;"><i class="fa fa-tachometer"></i> {{t "account.hashrate"}} (30m): <span><b>{{format-hashrate model.currentHashrate}}</b></span></div>
+				<div style="display: block;"><i class="fa fa-tachometer"></i> {{t "account.hashrate"}} (3h): <span><b>{{format-hashrate model.hashrate}}</b></span></div>
+				<div style="display: block;"><i class="fa fa-calculator"></i> {{t "account.earnings.perday"}} (3h avg): <span><b>{{format-number earnPerDay}} {{config.Unit}}</b></span></div>
 			</div>
 		</div>	
 		<div class="col-md-4">
 			<div class="panel panel-primary panel-body">
-			<div class="panel-heading">
-            </div>
-				<div style="display: block;"><i class="fa fa-tachometer"></i> {{t "account.blocks.found"}}: <span>{{format-number model.stats.blocksFound fallback='0'}}</span></div>
-				<div style="display: block;"><i class="fa fa-paper-plane-o"></i> {{t "account.total.payments"}}: <span>{{format-number model.paymentsTotal}}</span></div>
+				<div style="display: block;"><i class="fa fa-tachometer"></i> {{t "account.blocks.found"}}: <span><b>{{format-number model.stats.blocksFound fallback='0'}}</b></span></div>
+				<div style="display: block;"><i class="fa fa-paper-plane-o"></i> {{t "account.total.payments"}}: <span><b>{{format-number model.paymentsTotal}}</b></span></div>
 				<div style="display: block;">
-					<i class="fa fa-gears"></i> {{t "account.round_share"}}: <span>{{format-number roundPercent style='percent' maximumFractionDigits='6'}}</span><br/>
+					<i class="fa fa-gears"></i> {{t "account.round_share"}}: <span><b>{{format-number roundPercent style='percent' maximumFractionDigits='6'}}</b></span><br/>
 					<small>{{t "account.round_share_description"}}</small>
 				</div>
 				<div style="display: block;">
 					<i class="fa fa-clock-o"></i>
-					{{t "account.epoch_switch"}}: <span>{{format-relative applicationController.nextEpoch units="hour"}}</span>					
+					{{t "account.epoch_switch"}}: <span><b>{{format-relative applicationController.nextEpoch units="hour"}}</b></span>					
 				</div>
-			<div class="panel-heading">
-            </div>
 			</div>
 		</div>
 	</div>
