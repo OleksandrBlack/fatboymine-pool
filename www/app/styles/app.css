@@ -299,17 +299,14 @@ h4.note {
   min-height: 185px;
 }
 
-.table-success,
-.table-success > th,
-.table-success > td {
-  background-color: #dff0d8;
+.table-warning,
+.table-warning > th,
+.table-warning > td {
+  background-color: #fcf8e3;
 }
 
-.table-hover .table-success:hover {
-  background-color: #d0e9c6;
-}
-
-.table-hover .table-success:hover > td,
-.table-hover .table-success:hover > th {
-  background-color: #d0e9c6;
+.table-title,
+.table-title > th,
+.table-title > td {
+  background-color: #e8f6fc;
 }
