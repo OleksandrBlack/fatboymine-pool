@@ -3,7 +3,7 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-4">
-			<div class="panel panel-primary ping">
+			<div class="panel panel-primary panel-body">
 				<div style="display: block;">
 					<i class="fa fa-cloud"></i> {{t "account.immature.balance"}}: <span><b>{{format-balance model.stats.immature}}</b></span><br>
 					<small>{{t "account.immature.description"}}</small>
@@ -22,7 +22,7 @@
 			</div>
 		</div>
 		<div class="col-md-4">
-			<div class="panel panel-primary ping">
+			<div class="panel panel-primary panel-body">
 			{{#if model.stats.lastShare}}
 				<div style="display: block;"><i class="fa fa-clock-o"></i>
 					{{t "account.last_share_submitted"}}: <span>{{format-relative (seconds-to-ms (string-to-int model.stats.lastShare))}}</span>
@@ -35,7 +35,7 @@
 			</div>
 		</div>	
 		<div class="col-md-4">
-			<div class="panel panel-primary ping">
+			<div class="panel panel-primary panel-body">
 				<div style="display: block;"><i class="fa fa-tachometer"></i> {{t "account.blocks.found"}}: <span>{{format-number model.stats.blocksFound fallback='0'}}</span></div>
 				<div style="display: block;"><i class="fa fa-paper-plane-o"></i> {{t "account.total.payments"}}: <span>{{format-number model.paymentsTotal}}</span></div>
 				<div style="display: block;">
