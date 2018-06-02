@@ -1,87 +1,34 @@
+<div class="jumbotron">
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-12">
-			<div class="row">
-				<div class="col-md-4">
-					<div class="jumbotron">
-1
-  
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="jumbotron">
-2
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="jumbotron">
-3
-					</div>
-				</div>
+		<div class="col-md-4">
+			<div class="panel panel-primary panel-body">
+						<strong>Min. payout threshold: {{config.PayoutThreshold}}</strong><br/>
+						<span class="label label-success">PPLNS</span> Real time PPLNS payout scheme.<br/>
+						<span class="label label-success">24/365</span> Unstoppable server infrastructure with 24/365 customer support.<br/>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="panel panel-primary panel-body">
+						<div><i class="fa fa-users"></i> {{t "home.miners_online"}}: <span id="poolHashrate"><b>{{format-number stats.model.minersTotal}}</b></span></div>
+						<div><i class="fa fa-tachometer"></i> {{t "home.pool_hashrate"}}: <span id="poolHashrate"><b>{{format-hashrate stats.model.hashrate}}</b></span></div>
+						<div><i class="fa fa-money"></i> {{t "home.pool_fee"}}: <span id="poolFee" class="label label-success"><b>{{config.PoolFee}}</b></span></div>
+						{{#if stats.model.stats.lastBlockFound}}
+							<div><i class="fa fa-clock-o"></i> {{t "home.last_block_found"}}: <span><b>{{format-relative (seconds-to-ms stats.model.stats.lastBlockFound)}}</b></span></div>
+						{{/if}}
+			</div>
+		</div>	
+		<div class="col-md-4">
+			<div class="panel panel-primary panel-body">
+						<div><i class="fa fa-unlock-alt"></i> {{t "home.network_difficulty"}}: <span><b>{{with-metric-prefix stats.difficulty}}</b></span></div>
+						<div><i class="fa fa-tachometer"></i> {{t "home.network_hashrate"}}: <span><b>{{format-hashrate stats.hashrate}}</b></span></div>
+						<div><i class="fa fa-bars"></i> {{t "home.blockchain_height"}}: <span><b>{{format-number stats.height}}</b></span></div>
+						<div><i class="fa fa-clock-o"></i> {{t "home.current_round_variance"}}: <span><b>{{format-number stats.roundVariance style='percent'}}</b></span></div>
 			</div>
 		</div>
 	</div>
 </div>
-<div class="jumbotron">
-  <div class="container">
-
-    <div class="row">
-
-	 
-<div class="col-lg-5">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                        </div>
-                        <div class="panel-body">
-						<strong>Min. payout threshold: {{config.PayoutThreshold}}</strong><br/>
-						<span class="label label-success">PPLNS</span> Real time PPLNS payout scheme.<br/>
-						<span class="label label-success">24/365</span> Unstoppable server infrastructure with 24/365 customer support.<br/>
-						</div>
-						<div class="panel-heading">
-                        </div>
-                    </div>
-                </div>
-
-<div class="col-lg-3">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                        </div>
-                        <div class="panel-body">
-						<div><i class="fa fa-users"></i> {{t "home.miners_online"}}: <span id="poolHashrate">{{format-number stats.model.minersTotal}}</span></div>
-						<div><i class="fa fa-tachometer"></i> {{t "home.pool_hashrate"}}: <span id="poolHashrate">{{format-hashrate stats.model.hashrate}}</span></div>
-						<div><i class="fa fa-money"></i> {{t "home.pool_fee"}}: <span id="poolFee" class="label label-success">{{config.PoolFee}}</span></div>
-						{{#if stats.model.stats.lastBlockFound}}
-							<div><i class="fa fa-clock-o"></i> {{t "home.last_block_found"}}: <span>{{format-relative (seconds-to-ms stats.model.stats.lastBlockFound)}}</span></div>
-						{{/if}}
-						</div>
-						<div class="panel-heading">
-                        </div>
-                    </div>
-                </div>
-				
-<div class="col-lg-3">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                        </div>
-                        <div class="panel-body">
-						<div><i class="fa fa-unlock-alt"></i> {{t "home.network_difficulty"}}: <span>{{with-metric-prefix stats.difficulty}}</span></div>
-						<div><i class="fa fa-tachometer"></i> {{t "home.network_hashrate"}}: <span>{{format-hashrate stats.hashrate}}</span></div>
-						<div><i class="fa fa-bars"></i> {{t "home.blockchain_height"}}: <span>{{format-number stats.height}}</span></div>
-						<div><i class="fa fa-clock-o"></i> {{t "home.current_round_variance"}}: <span>{{format-number stats.roundVariance style='percent'}}</span></div>
-						</div>
-                        <div class="panel-heading">
-                        </div>
-                    </div>
-                </div>
-				
-	
-	  
-
-	  
-    </div>
-  </div>
 </div>
-
 
 <div class="container">
 

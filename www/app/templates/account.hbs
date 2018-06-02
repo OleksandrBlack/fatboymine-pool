@@ -25,7 +25,7 @@
 			<div class="panel panel-primary panel-body">
 			{{#if model.stats.lastShare}}
 				<div style="display: block;"><i class="fa fa-clock-o"></i>
-					{{t "account.last_share_submitted"}}: <span>{{format-relative (seconds-to-ms (string-to-int model.stats.lastShare))}}</span>
+					{{t "account.last_share_submitted"}}: <span><b>{{format-relative (seconds-to-ms (string-to-int model.stats.lastShare))}}</b></span>
 				</div>
 			{{/if}}
 				<div style="display: block;"><i class="fa fa-gears"></i> {{t "account.online"}}: <span><b>{{format-number model.workersOnline}}</b></span></div>
