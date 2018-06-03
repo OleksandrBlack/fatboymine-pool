@@ -43,7 +43,7 @@
             <i class="fa fa-comments"></i> {{t 'menu.about'}} <span class="badge alert-success">&#x2713;</span>
           {{/link-to}}
         {{/active-li}}
-		<li>
+		{{#active-li}}
 			<a class="fa fa-money" title="{{config.COIN}} Current Price">
 				{{#if isPercentAboveZero}}
 					${{format-number model.exchangedata.price_usd maximumFractionDigits='2'}} <span class="badge alert-success"><i class="fa fa-caret-up"></i> (+{{model.exchangedata.percent_change_24h}}%)</span>
@@ -51,7 +51,7 @@
 					${{format-number model.exchangedata.price_usd maximumFractionDigits='2'}} <span class="badge alert-danger"><i class="fa fa-caret-down"></i> ({{model.exchangedata.percent_change_24h}}%)</span>
 				{{/if}}
 			</a>
-		</li>
+        {{/active-li}}
 		<ul class="nav navbar-nav navbar-right">
 			<li>
 				<a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" id="selectedLanguage">
