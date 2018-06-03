@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #ellamain:
-screen -dmS pirl /usr/bin/gpirl --rpc --ws --unlock="./pirluser" --password="./pirlpass" --max-peers=500 --extra-data="pirl.fatboymine.com" --identity="pirl.fatboymine.com" --cache=4096
-
+#screen -dmS pirl /usr/bin/gpirl --rpc --ws --unlock="./pirluser" --password="./pirlpass" --max-peers=500 --extra-data="pirl.fatboymine.com" --identity="pirl.fatboymine.com" --cache=4096
+screen -dmS pirl /usr/bin/pirl --rpc --ws --maxpeers=500 --extradata="pirl.fatboymine.com" --identity="pirl.fatboymine.com" --cache=4096 --datadir "/root/.pirl" --port=30304
 sleep 5
 
 #pool2b:
