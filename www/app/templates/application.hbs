@@ -57,16 +57,17 @@
                         </li>
 
 	  
-	  		<li class="dropdown">
-	<a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	  <i class="fa fa-users"></i> {{action 'selectLanguage' on='change'}}
-	</a>
-	<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-	  <li><a href="#" data-ember-action="420"><i class="fa fa-user"></i> English</a></li>
-	  <li><a href="#" data-ember-action="421"><i class="fa fa-user"></i> 한국어</a></li>
-	  <li><a href="#" data-ember-action="422"><i class="fa fa-user"></i> русский язык</a></li>
-	</ul>
-	</li>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" id="selectedLanguage">
+          {{selectedLanguage}}
+          <b class="caret"></b></a>
+          <ul class="dropdown-menu dropdown-menu-right">
+            {{#each languages as |lang|}}
+            <li><a href="#" {{action 'selectLanguage' lang.value on='click'}}>{{lang.name}}</a></li>
+            {{/each}}
+          </ul>
+		  </ul>
 	  
       <form class="navbar-form navbar-right">
         <div class="form-group">
