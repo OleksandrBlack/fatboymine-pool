@@ -52,8 +52,7 @@
 				{{/if}}
 			</a>
         {{/active-li}}
-		<ul class="nav navbar-nav navbar-right">
-			<li>
+		{{#active-li}}
 				<a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" id="selectedLanguage">
 					{{selectedLanguage}}
 					<b class="caret"></b>
@@ -65,8 +64,7 @@
 						</li>
 					{{/each}}
 				</ul>
-			</li>
-		</ul>
+		{{#active-li}}
 	</ul>
     </div>
   </div>
