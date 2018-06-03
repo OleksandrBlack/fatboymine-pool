@@ -3,7 +3,7 @@ import config from '../config/environment';
 
 function selectLocale(selected) {
   // FIXME
-  let supported = ['en', 'ru', 'ua', 'en-us'];
+  let supported = ['en', 'en-us', 'ru', 'ua'];
   const language = navigator.languages[0] || navigator.language || navigator.userLanguage;
 
   let locale = selected;
@@ -50,6 +50,7 @@ export default Ember.Route.extend({
       { name: intl.t('lang.russian'), value: 'ru'},
       { name: intl.t('lang.ukrainian'), value: 'ua'}
     ]);
+  },
 
   actions: {
     selectLanguage: function(lang) {
@@ -71,7 +72,12 @@ export default Ember.Route.extend({
 
       return true;
     },
-	
+
+    toggleMenu: function() {
+      Ember.$('.navbar-collapse.in').attr("aria-expanded", false).removeClass("in");
+    }
+  },
+
 	model: function() {
     var url = config.APP.ApiUrl + 'api/stats';
     return Ember.$.getJSON(url).then(function(data) {
