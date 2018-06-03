@@ -43,37 +43,8 @@
             <i class="fa fa-comments"></i> {{t 'menu.about'}} <span class="badge alert-success">&#x2713;</span>
           {{/link-to}}
         {{/active-li}}
-		<li class="dropdown">
-	<a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	  <i class="fa fa-users"></i> {{action 'selectLanguage' on='change'}}
-	</a>
-	<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-	  <li><a href="#" data-ember-action="420"><i class="fa fa-user"></i> English</a></li>
-	  <li><a href="#" data-ember-action="421"><i class="fa fa-user"></i> 한국어</a></li>
-	  <li><a href="#" data-ember-action="422"><i class="fa fa-user"></i> русский язык</a></li>
-	</ul>
-	</li>
+
 	
-	<li class="dropdown">
-                        <a class="trlang" href="javascript:;">&nbsp;&nbsp;<i class="fa fa-cog"></i>&nbsp;&nbsp;LANGUAGE</a>
-                        <ul class="dropdown-content-lang">
-                            <li>
-                                <a class="english" id="english" href="javascript:;" onclick="testch(this.id)">
-                                    English
-                                </a>
-                            </li>
-                            <li>
-                                <a class="russian" id="russian" href="javascript:;" onclick="testch(this.id)">
-                                    Русский
-                                </a>
-                            </li>
-                            <li>
-                                <a class="ukrainian" id="ukrainian" href="javascript:;" onclick="testch(this.id)">
-                                    Українська
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
 		
                         <li>
                             <a class="fa fa-money" title="{{config.COIN}} Current Price">
@@ -85,7 +56,18 @@
                             </a>
                         </li>
 
-      </ul>
+	  
+	  		<li class="dropdown">
+	<a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	  <i class="fa fa-users"></i> {{action 'selectLanguage' on='change'}}
+	</a>
+	<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+	  <li><a href="#" data-ember-action="420"><i class="fa fa-user"></i> English</a></li>
+	  <li><a href="#" data-ember-action="421"><i class="fa fa-user"></i> 한국어</a></li>
+	  <li><a href="#" data-ember-action="422"><i class="fa fa-user"></i> русский язык</a></li>
+	</ul>
+	</li>
+	  
       <form class="navbar-form navbar-right">
         <div class="form-group">
           <select id="selected-language" {{action 'selectLanguage' on='change'}} class="form-control" style="width: 120px;">
