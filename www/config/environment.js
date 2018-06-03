@@ -15,32 +15,32 @@ module.exports = function(environment) {
 
     APP: {
 		
-      COIN: 'ETH',
-      CoinName: 'Ethereum',		
+      COIN: 'PIRL',
+      CoinName: 'Pirl',		
       // API host and port
-      ApiUrl: '//eth.fatboymine.com/',
+      ApiUrl: '//pirl.fatboymine.com/',
 
       // HTTP mining endpoint
-      HttpHost: 'http://eth.fatboymine.com',
-      HttpPort2b: 8888,
-	  HttpPort4b: 8899,
-	  HttpPort9b: 9999,
+      HttpHost: 'http://pirl.fatboymine.com',
+      HttpPort2b: 9100,
+	  HttpPort4b: 9101,
+	  HttpPort9b: 9102,
 
       // Stratum mining endpoint
-      StratumHost: 'eth.fatboymine.com',
-      StratumPort2b: 8008,
-	  StratumPort4b: 8009,
-	  StratumPort9b: 9009,
+      StratumHost: 'pirl.fatboymine.com',
+      StratumPort2b: 8100,
+	  StratumPort4b: 8101,
+	  StratumPort9b: 8102,
 
       // Fee and payout details
       PoolFee: '1%',
-      PayoutThreshold: '0.05 ETH',
+      PayoutThreshold: '0.05 PIRL',
 	  PayoutInterval: '2m',
-      Unit: 'ETH',
-      EtherUnit: 'ETH',
+      Unit: 'PIRL',
+      EtherUnit: 'PIRL',
 
       // For network hashrate (change for your favourite fork)
-	  BlockReward: 3,
+	  BlockReward: 10,
       BlockTime: 14.67
     }
   };

@@ -5,32 +5,32 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-  <loc>https://eth.fatboymine.com/</loc>
+  <loc>https://pirl.fatboymine.com/</loc>
   <lastmod>2018-05-12T03:20:06+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://eth.fatboymine.com/#/help</loc>
+  <loc>https://pirl.fatboymine.com/#/help</loc>
   <lastmod>2018-05-12T03:20:06+00:00</lastmod>
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://eth.fatboymine.com/#/blocks</loc>
+  <loc>https://pirl.fatboymine.com/#/blocks</loc>
   <lastmod>2018-05-12T03:20:06+00:00</lastmod>
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://eth.fatboymine.com/#/payments</loc>
+  <loc>https://pirl.fatboymine.com/#/payments</loc>
   <lastmod>2018-05-12T03:20:06+00:00</lastmod>
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://eth.fatboymine.com/#/miners</loc>
+  <loc>https://pirl.fatboymine.com/#/miners</loc>
   <lastmod>2018-05-12T03:20:06+00:00</lastmod>
   <priority>0.9</priority>
 </url>
 <url>
-  <loc>https://eth.fatboymine.com/#/about</loc>
+  <loc>https://pirl.fatboymine.com/#/about</loc>
   <lastmod>2018-05-12T03:20:06+00:00</lastmod>
   <priority>0.9</priority>
 </url>

@@ -21,7 +21,7 @@ If any of checks fails, module will not even try to continue.
 If payments can't be locked (another lock exist, usually after a failure) module will halt payouts.
 
 * Deduct balance of a miner and log pending payment
-* Submit a transaction to a node via `eth_sendTransaction`
+* Submit a transaction to a node via `pirl_sendTransaction`
 
 **If transaction submission fails, payouts will remain locked and halted in erroneous state.**
 
@@ -36,15 +36,15 @@ After payout session, payment module will perform `BGSAVE` (background saving) o
 
 ## Resolving Failed Payments (automatic)
 
-If your payout is not logged and not confirmed by Ethereum network you can resolve it automatically. You need to payouts in maintenance mode by setting up `RESOLVE_PAYOUT=1` or `RESOLVE_PAYOUT=True` environment variable:
+If your payout is not logged and not confirmed by Pirl network you can resolve it automatically. You need to payouts in maintenance mode by setting up `RESOLVE_PAYOUT=1` or `RESOLVE_PAYOUT=True` environment variable:
 
 `RESOLVE_PAYOUT=1 ./build/bin/fatboymine-pool payouts.json`.
 
-Payout module will fetch all rows from Redis with key `eth:payments:pending` and credit balance back to miners. Usually you will have only single entry there.
+Payout module will fetch all rows from Redis with key `pirl:payments:pending` and credit balance back to miners. Usually you will have only single entry there.
 
 If you see `No pending payments to resolve` we have no data about failed debits.
 
-If there was a debit operation performed which is not followed by actual money transfer (after `eth_sendTransaction` returned an error), you will likely see:
+If there was a debit operation performed which is not followed by actual money transfer (after `pirl_sendTransaction` returned an error), you will likely see:
 
 ```
 Will credit back following balances:
@@ -75,7 +75,7 @@ You can perform manual maintenance using `geth` and `redis-cli` utilities.
 Perform the following command in a `redis-cli`:
 
 ```
-ZREVRANGE "eth:payments:pending" 0 -1 WITHSCORES
+ZREVRANGE "pirl:payments:pending" 0 -1 WITHSCORES
 ```
 
 Result will be like this:
@@ -93,8 +93,8 @@ It's a `UNIXTIME`
 **Make sure there is no TX sent using block explorer. Skip this step if payment actually exist in a blockchain.**
 
 ```javascript
-eth.sendTransaction({
-  from: eth.coinbase,
+pirl.sendTransaction({
+  from: pirl.coinbase,
   to: '0x24947682e051f136f593c6960fdb6a1550577d3a',
   value: web3.toWei(25000000, 'shannon')
 })
@@ -109,30 +109,30 @@ eth.sendTransaction({
 Also usable for fixing missing payment entries.
 
 ```
-ZADD "eth:payments:all" 1462920526 0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331:0x24947682e051f136f593c6960fdb6a1550577d3a:25000000
+ZADD "pirl:payments:all" 1462920526 0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331:0x24947682e051f136f593c6960fdb6a1550577d3a:25000000
 ```
 
 ```
-ZADD "eth:payments:0x24947682e051f136f593c6960fdb6a1550577d3a" 1462920526 0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331:25000000
+ZADD "pirl:payments:0x24947682e051f136f593c6960fdb6a1550577d3a" 1462920526 0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331:25000000
 ```
 
 ### Delete Erroneous Payment Entry
 
 ```
-ZREM "eth:payments:pending" "0x24947682e051f136f593c6960fdb6a1550577d3a:25000000"
+ZREM "pirl:payments:pending" "0x24947682e051f136f593c6960fdb6a1550577d3a:25000000"
 ```
 
 ### Update Internal Stats
 
 ```
-HINCRBY "eth:finances" pending -25000000
-HINCRBY "eth:finances" paid 25000000
+HINCRBY "pirl:finances" pending -25000000
+HINCRBY "pirl:finances" paid 25000000
 ```
 
 ### Unlock Payouts
 
 ```
-DEL "eth:payments:lock"
+DEL "pirl:payments:lock"
 ```
 
 ## Resolving Missing Payment Entries

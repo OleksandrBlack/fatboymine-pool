@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #ellamain:
-screen -dmS etscgeth /path/to/geth --rpc --ws --unlock="./etscuser" --password="./etscpass" --max-peers=500 --extra-data="fatboymine-pool" --identity="fatboymine-pool" --cache=128 --ethstats "fatboymine-pool:NewEthereumSocial@stats.OleksandrBlack.kr"
+screen -dmS pirl /usr/bin/gpirl --rpc --ws --unlock="./pirluser" --password="./pirlpass" --max-peers=500 --extra-data="pirl.fatboymine.com" --identity="pirl.fatboymine.com" --cache=4096
 
 sleep 5
 

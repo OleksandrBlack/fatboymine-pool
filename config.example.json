@@ -114,7 +114,7 @@
 	},
 
 	"newrelicEnabled": false,
-	"newrelicName": "MyEtherProxy",
+	"newrelicName": "MyPirlerProxy",
 	"newrelicKey": "SECRET_KEY",
 	"newrelicVerbose": false
 }
