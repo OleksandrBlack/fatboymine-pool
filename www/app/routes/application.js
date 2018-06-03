@@ -28,18 +28,32 @@ function selectLocale(selected) {
 export default Ember.Route.extend({
   intl: Ember.inject.service(),
   selectedLanguage: null,
+  languages: null,
 
   beforeModel() {
-    // pick a locale
-    let locale = selectLocale(this.get('selectedLanguage') || Ember.$.cookie('lang'));
-    this.get('intl').setLocale(locale);
-    this.set('selectedLanguage', locale);
-    Ember.$.cookie('lang', locale);
-  },
+    let locale = this.get('selectedLanguage');
+    if (!locale) {
+      // read cookie
+      locale = Ember.$.cookie('lang');
+      // pick a locale
+      locale = selectLocale(locale);
+
+      this.get('intl').setLocale(locale);
+      Ember.$.cookie('lang', locale);
+      console.log('INFO: locale selected - ' + locale);
+      this.set('selectedLanguage', locale);
+    }
+
+    let intl = this.get('intl');
+    this.set('languages', [
+      { name: intl.t('lang.english'), value: 'en-us'},
+      { name: intl.t('lang.russian'), value: 'ru'},
+      { name: intl.t('lang.ukrainian'), value: 'ua'}
+    ]);
 
   actions: {
-    selectLanguage: function() {
-      let selected = Ember.$('option:selected').attr('value');
+    selectLanguage: function(lang) {
+      let selected = lang;
       if (typeof selected === 'undefined') {
         return true;
       }
@@ -47,11 +61,17 @@ export default Ember.Route.extend({
       this.get('intl').setLocale(locale);
       this.set('selectedLanguage', locale);
       Ember.$.cookie('lang', locale);
+      let languages = this.get('languages');
+      for (var i = 0; i < languages.length; i++) {
+        if (languages[i].value == locale) {
+          Ember.$('#selectedLanguage').html(languages[i].name + '<b class="caret"></b>');
+          break;
+        }
+      }
 
       return true;
-    }
-  },
-
+    },
+	
 	model: function() {
     var url = config.APP.ApiUrl + 'api/stats';
     return Ember.$.getJSON(url).then(function(data) {
@@ -60,6 +80,7 @@ export default Ember.Route.extend({
 	},
 
   setupController: function(controller, model) {
+    model.languages = this.get('languages');
     this._super(controller, model);
     Ember.run.later(this, this.refresh, 5000);
   }

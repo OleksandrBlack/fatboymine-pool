@@ -70,20 +70,22 @@ export default Ember.Controller.extend({
     }
   }),
 
-  // FIXME
-  languages: Ember.computed({
+  languages: Ember.computed('model', {
     get() {
-      let intl = this.get('intl');
-      return [ 
-	  { name: intl.t('lang.english'), value: 'en-us'}, 
-	  { name: intl.t('lang.russian'), value: 'ru'},
-	  { name: intl.t('lang.ukrainian'), value: 'ua'}];
+      return this.get('model.languages');
     }
   }),
 
   selectedLanguage: Ember.computed({
     get() {
-      return Ember.$.cookie('lang');
+      var langs = this.get('languages');
+      var lang = Ember.$.cookie('lang');
+      for (var i = 0; i < langs.length; i++) {
+        if (langs[i].value == lang) {
+          return langs[i].name;
+        }
+      }
+      return lang;
     }
   }),
   
