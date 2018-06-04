@@ -39,7 +39,7 @@
 	},
 	"exchange": {
 		"enabled": true,
-		"url": "https://api.coinmarketcap.com/v2/ticker/2122/",
+		"url": "https://api.coinmarketcap.com/v1/ticker/?convert=USD&limit=830",
 		"timeout": "50s",
 		"refreshInterval": "1800s"
 	},
