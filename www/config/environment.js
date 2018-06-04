@@ -15,32 +15,32 @@ module.exports = function(environment) {
 
     APP: {
 		
-      COIN: 'ETH',
-      CoinName: 'Ethereum',		
+      COIN: 'ELLA',
+      CoinName: 'Ellaism',		
       // API host and port
-      ApiUrl: '//eth.fatboymine.com/',
+      ApiUrl: '//ella.fatboymine.com/',
 
       // HTTP mining endpoint
-      HttpHost: 'http://eth.fatboymine.com',
-      HttpPort2b: 8888,
-	  HttpPort4b: 8899,
-	  HttpPort9b: 9999,
+      HttpHost: 'http://ella.fatboymine.com',
+      HttpPort2b: 9101,
+	  HttpPort4b: 9102,
+	  HttpPort9b: 9103,
 
       // Stratum mining endpoint
-      StratumHost: 'eth.fatboymine.com',
-      StratumPort2b: 8008,
-	  StratumPort4b: 8009,
-	  StratumPort9b: 9009,
+      StratumHost: 'ella.fatboymine.com',
+      StratumPort2b: 8101,
+	  StratumPort4b: 8102,
+	  StratumPort9b: 8103,
 
       // Fee and payout details
       PoolFee: '1%',
-      PayoutThreshold: '0.05 ETH',
+      PayoutThreshold: '0.05 ELLA',
 	  PayoutInterval: '2m',
-      Unit: 'ETH',
-      EtherUnit: 'ETH',
+      Unit: 'ELLA',
+      EtherUnit: 'ELLA',
 
       // For network hashrate (change for your favourite fork)
-	  BlockReward: 3,
+	  BlockReward: 5,
       BlockTime: 14.67
     }
   };
