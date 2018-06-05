@@ -2,14 +2,14 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-4">
-			<div class="panel panel-primary panel-body">
+			<div class="panel panel-primary panel-body shadow">
 				<strong>Min. payout threshold: {{config.PayoutThreshold}}</strong><br/>
 				<span class="label label-success">PPLNS</span> Real time PPLNS payout scheme.<br/>
 				<span class="label label-success">24/365</span> Unstoppable server infrastructure with 24/365 customer support.<br/>
 			</div>
 		</div>
 		<div class="col-md-4">
-			<div class="panel panel-primary panel-body">
+			<div class="panel panel-primary panel-body shadow">
 				<div><i class="fa fa-users"></i> {{t "home.miners_online"}}: <span id="poolHashrate"><b>{{format-number stats.model.minersTotal}}</b></span></div>
 				<div><i class="fa fa-tachometer"></i> {{t "home.pool_hashrate"}}: <span id="poolHashrate"><b>{{format-hashrate stats.model.hashrate}}</b></span></div>
 				<div><i class="fa fa-money"></i> {{t "home.pool_fee"}}: <span id="poolFee" class="label label-success"><b>{{config.PoolFee}}</b></span></div>
@@ -19,7 +19,7 @@
 			</div>
 		</div>	
 		<div class="col-md-4">
-			<div class="panel panel-primary panel-body">
+			<div class="panel panel-primary panel-body shadow">
 				<div><i class="fa fa-unlock-alt"></i> {{t "home.network_difficulty"}}: <span><b>{{with-metric-prefix stats.difficulty}}</b></span></div>
 				<div><i class="fa fa-tachometer"></i> {{t "home.network_hashrate"}}: <span><b>{{format-hashrate stats.hashrate}}</b></span></div>
 				<div><i class="fa fa-bars"></i> {{t "home.blockchain_height"}}: <span><b>{{format-number stats.height}}</b></span></div>
@@ -51,7 +51,7 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-4">
-			<table class="table table-bordered table-sm">
+			<table class="table table-bordered table-sm shadow">
 				<thead>
 					<tr class="table-title">
 						<th>
@@ -92,7 +92,7 @@
 		</div>
 		
 		<div class="col-md-4">
-			<table class="table table-bordered table-sm">
+			<table class="table table-bordered table-sm shadow">
 				<thead>
 					<tr class="table-title">
 						<th>
@@ -133,7 +133,7 @@
 		</div>
 		
 		<div class="col-md-4">
-			<table class="table table-bordered table-sm">
+			<table class="table table-bordered table-sm shadow">
 				<thead>
 					<tr class="table-title">
 						<th>
@@ -180,7 +180,7 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-4">
-			<div class="panel panel-primary panel-body conect">
+			<div class="panel panel-primary panel-body shadow" style="text-align:center">
 				<h5>
 					<span class="label label-success">2b</span>&nbsp;<a href="./#/help" title="CLICK FOR HELP"><b>RIG HASHRATE &lt; 150 MH/s</b></a>
 					<br>
@@ -197,7 +197,7 @@
 			</div>
 		</div>
 		<div class="col-md-4">
-			<div class="panel panel-primary panel-body conect">
+			<div class="panel panel-primary panel-body shadow" style="text-align:center">
 				<h5 >
 					<span class="label label-success">4b</span>&nbsp;<a href="./#/help" title="CLICK FOR HELP"><b>WORKER / NICEHASH 150 - 800 MH/s</b></a>
 					<br>
@@ -214,7 +214,7 @@
 			</div>
 		</div>	
 		<div class="col-md-4">
-			<div class="panel panel-primary panel-body conect">
+			<div class="panel panel-primary panel-body shadow" style="text-align:center">
 				<h5 >
 					<span class="label label-success">9b</span>&nbsp;<a href="./#/help" title="CLICK FOR HELP"><b>WORKER / NICEHASH &gt; 800 MH/s</b></a>
 					<br>

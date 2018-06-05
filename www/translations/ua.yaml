@@ -33,8 +33,8 @@ home:
   last_block_found: Останній знайдений блок
   network_difficulty: Складність Мережі
   network_hashrate: Хешрейт Мережі
-  blockchain_height: Рівень Блокчейну
-  current_round_variance: Поточне коло розкид
+  blockchain_height: Висота Блокчейну
+  current_round_variance: Поточний Раунд
 
   query_history: Ваша статистика та історія платежів
   input:
@@ -49,17 +49,17 @@ home:
 account:
   immature:
     balance: Незрілий Баланс
-    description: Попередній баланс, очікує блоків до зрілості.
+    description: Попередній баланс, очікує блоки для зрілості.
   pending:
     balance: Очікуючий Баланс
     description: Кредитні монети що очікують виплати.
   current: Поточний Платіж
-  last_share_submitted: Останнє відправлення Шара
+  last_share_submitted: Остання Відправлена Шара
   online: Воркери Онлайн
   hashrate: Хешрейт
   earnings:
     perday: Дохід за день
-    short_avg: ср.
+    short_avg: сер.
   blocks:
     found: Знайдені Блоки
   total:
@@ -71,14 +71,21 @@ account:
   workers: Воркери
   payouts: Виплати
   rewards: Нагороди
+  your_latest_rewards: Ваші Останні Нагороди
+  sm_immature: Незріла
+  sm_matured: Зріла
+  block_height: Висота Блоку
+  block_reward: Нагорода
+  block_round_share: Шар в Раунді
+  no_rewards_yet: Ще немає винагород
 
-  your_workers: Воркері
+  your_workers: Воркери
   last_share: Остання Шара
-  short_average: грубий, короткий, середній
+  short_average: грубый, короткий, средний
   long_average: точний, довгий, середній
   no_workers_online: Нема Воркерів Онлайн
   notice: Зверніть увагу
-  json_api_url: Ваша поточна статистика URL-адреси API JSON
+  json_api_url: Ваша поточна статистика JSON API URL
 
 payout:
   latest_payouts: Ваші останні виплати
@@ -112,7 +119,7 @@ luck:
   blocks: Блоки
   shares_diff: Шари/Складність
   uncle_rate: Оцінка Rate
-  orphan_rate: Осиротівші Rate
+  orphan_rate: Оцінка Відкинутих
 
 payments:
   pay_tx: Пул завжди сплачує повну нагороду за блок, включаючи плату за  TX та нагороду uncle.
@@ -122,4 +129,4 @@ payments:
   amount: Сума
   address: Адреса
   txid: Tx ID
-  no_payouts_yet: Немає виплат ще
+  no_payouts_yet: Ще немає виплат
