@@ -2,14 +2,14 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-4">
-			<div class="panel panel-primary panel-body">
+			<div class="panel panel-primary panel-body shadow">
 				<strong>Min. payout threshold: {{config.PayoutThreshold}}</strong><br/>
 				<span class="label label-success">PPLNS</span> Real time PPLNS payout scheme.<br/>
 				<span class="label label-success">24/365</span> Unstoppable server infrastructure with 24/365 customer support.<br/>
 			</div>
 		</div>
 		<div class="col-md-4">
-			<div class="panel panel-primary panel-body">
+			<div class="panel panel-primary panel-body shadow">
 				<div><i class="fa fa-users"></i> {{t "home.miners_online"}}: <span id="poolHashrate"><b>{{format-number stats.model.minersTotal}}</b></span></div>
 				<div><i class="fa fa-tachometer"></i> {{t "home.pool_hashrate"}}: <span id="poolHashrate"><b>{{format-hashrate stats.model.hashrate}}</b></span></div>
 				<div><i class="fa fa-money"></i> {{t "home.pool_fee"}}: <span id="poolFee" class="label label-success"><b>{{config.PoolFee}}</b></span></div>
@@ -19,7 +19,7 @@
 			</div>
 		</div>	
 		<div class="col-md-4">
-			<div class="panel panel-primary panel-body">
+			<div class="panel panel-primary panel-body shadow">
 				<div><i class="fa fa-unlock-alt"></i> {{t "home.network_difficulty"}}: <span><b>{{with-metric-prefix stats.difficulty}}</b></span></div>
 				<div><i class="fa fa-tachometer"></i> {{t "home.network_hashrate"}}: <span><b>{{format-hashrate stats.hashrate}}</b></span></div>
 				<div><i class="fa fa-bars"></i> {{t "home.blockchain_height"}}: <span><b>{{format-number stats.height}}</b></span></div>
@@ -50,7 +50,7 @@
 <h4>Connection info</h4>
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-4">
+		<div class="col-md-4 shadow">
 			<table class="table table-bordered table-sm">
 				<thead>
 					<tr class="table-title">
@@ -92,7 +92,7 @@
 		</div>
 		
 		<div class="col-md-4">
-			<table class="table table-bordered table-sm">
+			<table class="table table-bordered table-sm shadow">
 				<thead>
 					<tr class="table-title">
 						<th>
