@@ -1,6 +1,7 @@
 <div class="container">
 <h4>{{t "block.recently_found_blocks"}}:</h4>
 {{#if model.candidates}}
+<div class="table-responsive">
 <table class="table table-condensed table-striped">
   <thead>
     <tr>
@@ -25,11 +26,13 @@
     {{/each}}
   </tbody>
 </table>
+</div>
 {{else}}
 <h3>-</h3>
 {{/if}}
 <h4>{{t "block.immature_blocks"}}:</h4>
 {{#if model.immature}}
+<div class="table-responsive">
 <table class="table table-condensed table-striped">
   <thead>
     <tr>
@@ -46,11 +49,13 @@
     {{/each}}
   </tbody>
 </table>
+</div>
 {{else}}
 <h3>-</h3>
 {{/if}}
 <h4>{{t "block.matured"}}:</h4>
 {{#if model.matured}}
+<div class="table-responsive">
 <table class="table table-condensed table-striped">
   <thead>
     <tr>
@@ -67,6 +72,7 @@
     {{/each}}
   </tbody>
 </table>
+</div>
 {{else}}
 <h3>-</h3>
 {{/if}}
