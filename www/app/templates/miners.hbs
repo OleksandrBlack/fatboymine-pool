@@ -5,6 +5,19 @@
 				<div class="panel panel-primary panel-body shadow">
 					<p class="lead">{{t "miners.total_hashrate"}}: <strong>{{format-hashrate model.hashrate}}</strong>.</p>
 					<strong>{{t "miners.total_miners"}}:</strong> <span class="label label-info">{{model.minersTotal}}</span>
+					
+					
+					
+					
+					
+    <div class="input-group" style="margin-top: 20px;">
+        {{input value=cachedLogin class="form-control m-input m-input--air" placeholder="Enter Your Wallet Address"}}
+        <span class="input-group-btn">
+            <button class="btn m-btn m-btn--gradient-from-primary m-btn--gradient-to-info" type="button" {{action 'lookup' cachedLogin}}>
+                <span style="display: inline;"><i class="fa fa-search"></i> Lookup</span>
+            </button>
+        </span>
+    </div>
 				</div>
 			</div>
 		</div>
