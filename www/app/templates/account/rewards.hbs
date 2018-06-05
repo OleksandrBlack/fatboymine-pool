@@ -5,7 +5,7 @@
 			<div class="col-md-4">
 			</div>
 			<div class="col-md-4" style="text-align:center">
-				<h4>{{t "account.rewards.your_latest_rewards"}}</h4>
+				<h4>{{t "account.your_latest_rewards"}}</h4>
 				<div class="panel panel-primary panel-body shadow">
 					<table class="table table-condensed table-striped">
 						{{#each model.sumrewards as |sumreward|}}
@@ -21,13 +21,13 @@
 		</div>	
 	</div>
 </div>
-	<span class="label label-default">{{t "account.rewards.sm_immature"}}</span> <span class="label label-success">{{t "account.rewards.sm_matured"}}</span>
+	<span class="label label-default">{{t "account.sm_immature"}}</span> <span class="label label-success">{{t "account.sm_matured"}}</span>
   <table class="table table-condensed table-striped">
     <thead>
       <tr>
-        <th>{{t "account.rewards.block_height"}}</th>
-        <th>{{t "account.rewards.block_reward"}}</th>
-        <th>{{t "account.rewards.block_round_share"}}</th>
+        <th>{{t "account.block_height"}}</th>
+        <th>{{t "account.block_reward"}}</th>
+        <th>{{t "account.block_round_share"}}</th>
       </tr>
     </thead>
     <tbody>
@@ -47,6 +47,6 @@
     </tbody>
   </table>
   {{else}}
-  <h3>{{t "account.rewards.no_rewards_yet"}}</h3>
+  <h3>{{t "account.no_rewards_yet"}}</h3>
   {{/if}}
 </div>

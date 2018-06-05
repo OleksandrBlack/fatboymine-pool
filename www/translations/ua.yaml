@@ -71,13 +71,13 @@ account:
   workers: Воркери
   payouts: Виплати
   rewards: Нагороди
-    your_latest_rewards: Ваші Останні Нагороди
-    sm_immature: Незріла
-    sm_matured: Зріла
-    block_height: Висота Блоку
-    block_reward: Нагорода
-    block_round_share: Шар в Раунді
-    no_rewards_yet: Ще немає винагород
+  your_latest_rewards: Ваші Останні Нагороди
+  sm_immature: Незріла
+  sm_matured: Зріла
+  block_height: Висота Блоку
+  block_reward: Нагорода
+  block_round_share: Шар в Раунді
+  no_rewards_yet: Ще немає винагород
 
   your_workers: Воркери
   last_share: Остання Шара
