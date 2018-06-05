@@ -3,41 +3,29 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="panel panel-primary panel-body shadow">
-					<p class="lead">{{t "miners.total_hashrate"}}: <strong>{{format-hashrate model.hashrate}}</strong>.</p>
-					<strong>{{t "miners.total_miners"}}:</strong> <span class="label label-info">{{model.minersTotal}}
-					    <div class="input-group" style="margin-top: 20px; width: 500px;">
-        {{input value=cachedLogin class="form-control m-input m-input--air" placeholder="Enter Your Wallet Address"}}
-        <span class="input-group-btn">
-            <button class="btn m-btn m-btn--gradient-from-primary m-btn--gradient-to-info" type="button" {{action 'lookup' cachedLogin}}>
-                <span style="display: inline;"><i class="fa fa-search"></i> Lookup</span>
-            </button>
-        </span>
-    </div>
-					</span>
-					
-					
-					
-					
-					
-
+					<div class="col-md-6">
+						<p class="lead">{{t "miners.total_hashrate"}}: <strong>{{format-hashrate model.hashrate}}</strong>.</p>
+						<strong>{{t "miners.total_miners"}}:</strong> <span class="label label-info">{{model.minersTotal}}</span>
+					</div>
+					<div class="col-md-6">
+						<div class="stats">
+							<h4>{{t "home.query_history"}}</h4>
+							<div class="input-group">
+								{{input value=cachedLogin class="form-control" placeholder=(t "home.input.enter_your_wallet_address")}}
+								<span class="input-group-btn">
+									<button class="btn btn-primary" type="button" {{action 'lookup' cachedLogin}}>
+										<span style="display: inline;"><i class="fa fa-search"></i> {{t "home.button.lookup"}}</span>
+									</button>
+								</span>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<div class="container">
-  <div class="stats">
-    <h4>{{t "home.query_history"}}</h4>
-    <div class="input-group">
-      {{input value=cachedLogin class="form-control" placeholder=(t "home.input.enter_your_wallet_address")}}
-      <span class="input-group-btn">
-        <button class="btn btn-primary" type="button" {{action 'lookup' cachedLogin}}>
-          <span style="display: inline;"><i class="fa fa-search"></i> {{t "home.button.lookup"}}</span>
-        </button>
-      </span>
-    </div>
-  </div>
-</div>
+
 <div class="container">
   {{#if model.miners}}
   <h4>{{t "miners.miners"}}</h4>
