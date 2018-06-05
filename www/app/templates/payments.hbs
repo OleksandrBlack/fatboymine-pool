@@ -1,16 +1,22 @@
 <div class="jumbotron">
-  <div class="container">
-    <p class="lead">{{t "payments.pay_tx"}}</p>
-    <strong>{{t "payments.total_payments_sent"}}:</strong> <span class="label label-info">{{model.paymentsTotal}}</span>
-  </div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-primary panel-body shadow">
+					<p class="lead">{{t "payments.pay_tx"}}</p>
+					<strong>{{t "payments.total_payments_sent"}}:</strong> <span class="label label-info">{{model.paymentsTotal}}</span>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <div class="container">
   {{#if model.payments}}
   <h4>{{t "payments.latest_payouts"}}</h4>
   <div class="table-responsive">
-    <table class="table table-condensed table-striped">
+    <table class="table table-condensed table-striped table-bordered">
       <thead>
-        <tr>
+        <tr class="table-title">
           <th>{{t "payments.time"}}</th>
           <th>{{t "payments.amount"}}</th>
           <th>{{t "payments.address"}}</th>
@@ -19,7 +25,7 @@
       </thead>
       <tbody>
         {{#each model.payments as |tx|}}
-          <tr>
+          <tr class="table-warning">
             <td>{{format-date-locale tx.timestamp}}</td>
             <td>{{format-number tx.formatAmount}}</td>
             <td>
