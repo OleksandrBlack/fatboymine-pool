@@ -1,3 +1,4 @@
+<div class="container">
 <div class="container-fluid">
   {{#if model.rewards}}
 	<div class="row">
@@ -16,15 +17,16 @@
 						{{/each}}
 					</table>
 				</div>
+			</div>
 			<div class="col-md-4">
 			</div>
-		</div>	
+		</div>
 	</div>
-</div>
+
 	<span class="label label-default">{{t "account.sm_immature"}}</span> <span class="label label-success">{{t "account.sm_matured"}}</span>
-  <table class="table table-condensed table-striped">
+  <table class="table table-condensed table-striped table-bordered shadow">
     <thead>
-      <tr>
+      <tr class="table-title">
         <th>{{t "account.block_height"}}</th>
         <th>{{t "account.block_reward"}}</th>
         <th>{{t "account.block_round_share"}}</th>
@@ -32,7 +34,7 @@
     </thead>
     <tbody>
       {{#each model.rewards as |tx|}}
-        <tr>
+        <tr class="table-warning">
           <td>{{format-number  tx.blockheight}}</td>
           <td>
 		{{#if tx.immature}}
@@ -49,4 +51,5 @@
   {{else}}
   <h3>{{t "account.no_rewards_yet"}}</h3>
   {{/if}}
+</div>
 </div>

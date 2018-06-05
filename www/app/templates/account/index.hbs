@@ -3,9 +3,9 @@
   {{#if model.workers}}
   <h4>{{t "account.your_workers"}}</h4>
   <div class="table-responsive">
-    <table class="table table-condensed table-striped">
+    <table class="table table-condensed table-striped table-bordered shadow">
       <thead>
-        <tr>
+        <tr class="table-title">
           <th>ID</th>
           <th>{{t "account.hashrate"}} ({{t "account.short_average"}})</th>
           <th>{{t "account.hashrate"}} ({{t "account.long_average"}})</th>
@@ -15,7 +15,7 @@
       </thead>
       <tbody>
         {{#each-in model.workers as |k v|}}
-          <tr class="{{if v.offline "warning" "success"}}">
+          <tr class="{{if v.offline "danger" "success"}}">
             <td>{{k}}</td>
             <td>{{format-hashrate v.hr}}</td>
             <td>{{format-hashrate v.hr2}}</td>
