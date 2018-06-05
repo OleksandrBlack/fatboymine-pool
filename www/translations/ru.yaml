@@ -131,7 +131,7 @@ payments:
   txid: Tx ID
   no_payouts_yet: Пока нет выплат
 
-minesr:
+miners:
     total_hashrate: Общий хешрейт
     total_miners: Всего майнеров
     miners: Майнеры
