@@ -4,8 +4,8 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="panel panel-primary panel-body shadow">
-    <p class="lead">Total hashrate: {{format-hashrate model.hashrate}}.</p>
-    <strong>Total miners:</strong> <span class="label label-info">{{model.minersTotal}}</span>
+    <p class="lead">{{t "miners.total_hashrate"}}: {{format-hashrate model.hashrate}}.</p>
+    <strong>{{t "miners.total_miners"}}:</strong> <span class="label label-info">{{model.minersTotal}}</span>
 				</div>
 			</div>
 		</div>
@@ -14,14 +14,14 @@
 </div>
 <div class="container">
   {{#if model.miners}}
-  <h4>Miners</h4>
+  <h4>{{t "miners.miners"}}</h4>
   <div class="table-responsive">
-    <table class="table table-condensed table-striped">
+    <table class="table table-condensed table-striped table-bordered">
       <thead>
         <tr class="table-title">
-          <th>Login</th>
-          <th>Hashrate</th>
-          <th>Last Beat</th>
+          <th>{{t "miners.login"}}</th>
+          <th>{{t "miners.hashrate"}}</th>
+          <th>{{t "miners.last_beat"}}</th>
         </tr>
       </thead>
       <tbody>
@@ -36,6 +36,6 @@
     </table>
   </div>
   {{else}}
-  <h3>No miners</h3>
+  <h3>{{t "miners.no_miners"}}</h3>
   {{/if}}
 </div>
