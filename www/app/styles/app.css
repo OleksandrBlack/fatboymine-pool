@@ -252,8 +252,28 @@ h4.note {
   background-color: #e8f6fc;
 }
 
-.new-tabs {
-    color: #fff;
-    background-color: #4295d1;
-	font-weight:bold;
+.nav-tabs2 {
+  border-bottom: 1px solid #ddd;
+}
+.nav-tabs2 > li {
+  float: left;
+  margin-bottom: -1px;
+}
+.nav-tabs2 > li > a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+}
+.nav-tabs2 > li > a:hover {
+  border-color: #eee #eee #ddd;
+}
+.nav-tabs2 > li.active > a,
+.nav-tabs2 > li.active > a:hover,
+.nav-tabs2 > li.active > a:focus {
+  color: #555;
+  cursor: default;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
 }
