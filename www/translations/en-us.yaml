@@ -69,6 +69,13 @@ account:
   workers: Workers
   payouts: Payouts
   rewards: Rewards
+    your_latest_rewards: Your Latest Rewards
+    sm_immature: Immature
+    sm_matured: Matured
+    block_height: Block Height
+    block_reward: Reward
+    block_round_share: Round Share
+    no_rewards_yet: No rewards yet
 
   your_workers: Workers
   last_share: Last Share
