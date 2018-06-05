@@ -1,8 +1,16 @@
 <div class="jumbotron">
-  <div class="container">
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-primary panel-body shadow">
     <p class="lead">Total hashrate: {{format-hashrate model.hashrate}}.</p>
     <strong>Total miners:</strong> <span class="label label-info">{{model.minersTotal}}</span>
-  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+  
 </div>
 <div class="container">
   {{#if model.miners}}
@@ -10,7 +18,7 @@
   <div class="table-responsive">
     <table class="table table-condensed table-striped">
       <thead>
-        <tr>
+        <tr class="table-title">
           <th>Login</th>
           <th>Hashrate</th>
           <th>Last Beat</th>
@@ -18,7 +26,7 @@
       </thead>
       <tbody>
         {{#each model.miners as |m|}}
-        <tr class="{{if m.offline "warning"}}">
+        <tr class="{{if m.offline "warning"}} table-warning">
           <td>{{#link-to 'account' m.login class='hash'}}{{m.login}}{{/link-to}}</td>
           <td>{{format-hashrate m.hr}}</td>
           <td>{{format-date-locale m.lastBeat}}</td>
