@@ -3,7 +3,7 @@
   <b>1</b>
     <p class="lead">{{t "block.pool_rewards"}}</p>
     <span>
-    {{format-html-message "block.pool_notice.html" success=520}}
+    {{format-html-message "block.pool_notice.html" success=52}}
     </span>
   </div>
 </div>
@@ -13,6 +13,8 @@
   {{#if model.luck}}
     {{partial "luck"}}
   {{/if}}
+</div>
+<div class="container">
    <ul class="nav nav-tabs">
     {{#active-li currentWhen='blocks.index' role='presentation'}}
       {{#link-to 'blocks.index'}}{{t "block.blocks"}}{{/link-to}}
