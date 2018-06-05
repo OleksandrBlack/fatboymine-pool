@@ -249,7 +249,8 @@ h4.note {
 .table-title,
 .table-title > th,
 .table-title > td {
-  background-color: #e8f6fc;
+  background-color: #337ab7;
+  color: #fff;
 }
 
 .nav-tabs2 {

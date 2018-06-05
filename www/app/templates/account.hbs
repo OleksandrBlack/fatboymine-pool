@@ -3,7 +3,7 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-4">
-			<div class="panel panel-primary panel-body">
+			<div class="panel panel-primary panel-body shadow">
 				<div style="display: block;">
 					<i class="fa fa-cloud"></i> {{t "account.immature.balance"}}: <span><b>{{format-balance model.stats.immature}}</b></span><br>
 					<small>{{t "account.immature.description"}}</small>
@@ -22,7 +22,7 @@
 			</div>
 		</div>
 		<div class="col-md-4">
-			<div class="panel panel-primary panel-body">
+			<div class="panel panel-primary panel-body shadow">
 			{{#if model.stats.lastShare}}
 				<div style="display: block;"><i class="fa fa-clock-o"></i>
 					{{t "account.last_share_submitted"}}: <span><b>{{format-relative (seconds-to-ms (string-to-int model.stats.lastShare))}}</b></span>
@@ -35,7 +35,7 @@
 			</div>
 		</div>	
 		<div class="col-md-4">
-			<div class="panel panel-primary panel-body">
+			<div class="panel panel-primary panel-body shadow">
 				<div style="display: block;"><i class="fa fa-tachometer"></i> {{t "account.blocks.found"}}: <span><b>{{format-number model.stats.blocksFound fallback='0'}}</b></span></div>
 				<div style="display: block;"><i class="fa fa-paper-plane-o"></i> {{t "account.total.payments"}}: <span><b>{{format-number model.paymentsTotal}}</b></span></div>
 				<div style="display: block;">
@@ -54,7 +54,7 @@
 
 
 <div class="container">
-  <ul class="nav nav-tabs">
+  <ul class="nav nav-tabs2">
     {{#active-li currentWhen='account.index' role='presentation'}}
       {{#link-to 'account.index'}}{{t "account.workers"}} <span class="badge alert-success">{{model.workersOnline}}</span><span class="badge alert-danger">{{model.workersOffline}}</span>{{/link-to}}
     {{/active-li}}
