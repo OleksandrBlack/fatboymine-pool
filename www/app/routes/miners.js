@@ -30,5 +30,13 @@ export default Ember.Route.extend({
   setupController: function(controller, model) {
     this._super(controller, model);
     Ember.run.later(this, this.refresh, 5000);
+  },
+  
+  actions: {
+    lookup(login) {
+      if (!Ember.isEmpty(login)) {
+        return this.transitionTo('account', login);
+      }
+    }
   }
 });
