@@ -13,7 +13,7 @@
       </thead>
       <tbody>
         {{#each model.payments as |tx|}}
-          <tr>
+          <tr class="table-warning">
             <td>{{format-date-locale tx.timestamp}}</td>
             <td>
               <a href="{{format-explorer 'tx' tx.tx}}" class="hash" rel="nofollow" target="_blank">{{tx.tx}}</a>

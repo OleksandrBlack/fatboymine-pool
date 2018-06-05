@@ -32,7 +32,7 @@
     </thead>
     <tbody>
       {{#each model.rewards as |tx|}}
-        <tr>
+        <tr class="table-warning">
           <td>{{format-number  tx.blockheight}}</td>
           <td>
 		{{#if tx.immature}}
