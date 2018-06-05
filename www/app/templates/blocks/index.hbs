@@ -2,9 +2,9 @@
 <h4>{{t "block.recently_found_blocks"}}:</h4>
 {{#if model.candidates}}
 <div class="table-responsive">
-<table class="table table-condensed table-striped">
+<table class="table table-condensed table-striped table-bordered">
   <thead>
-    <tr>
+    <tr class="table-title">
       <th>{{t "block.height"}}</th>
       <th>{{t "block.time_found"}}</th>
       <th>{{t "block.variance"}}</th>
@@ -33,9 +33,9 @@
 <h4>{{t "block.immature_blocks"}}:</h4>
 {{#if model.immature}}
 <div class="table-responsive">
-<table class="table table-condensed table-striped">
+<table class="table table-condensed table-striped table-bordered">
   <thead>
-    <tr>
+    <tr class="table-title">
       <th>{{t "block.height"}}</th>
       <th>{{t "block.hash"}}</th>
       <th>{{t "block.time_found"}}</th>
@@ -56,9 +56,9 @@
 <h4>{{t "block.matured"}}:</h4>
 {{#if model.matured}}
 <div class="table-responsive">
-<table class="table table-condensed table-striped">
+<table class="table table-condensed table-striped table-bordered">
   <thead>
-    <tr>
+    <tr class="table-title">
       <th>{{t "block.height"}}</th>
       <th>{{t "block.hash"}}</th>
       <th>{{t "block.time_found"}}</th>
