@@ -34,7 +34,7 @@ home:
   network_difficulty: Сложность Сети
   network_hashrate: Хешрейт Сети
   blockchain_height: Высота Блокчейна
-  current_round_variance: Текущий круг разброс
+  current_round_variance: Текущий Раунд
 
   query_history: Ваша статистика и  История платежей
   input:
@@ -49,7 +49,7 @@ home:
 account:
   immature:
     balance: Незрелый Баланс
-    description: Предварительный баланс, ожидающий блоки, чтобы созреть.
+    description: Предварительный баланс, ожидает блоки для зрелости.
   pending:
     balance: Ожидающий Баланс
     description: Кредитные монеты ожидают выплаты.
@@ -71,11 +71,18 @@ account:
   workers: Воркеры
   payouts: Платежи
   rewards: Награды
+  your_latest_rewards: Ваши Последние Награды
+  sm_immature: Незрелая
+  sm_matured: Зрелая
+  block_height: Высота Блока
+  block_reward: Награда
+  block_round_share: Шар в Раунде
+  no_rewards_yet: Еще нет наград
 
   your_workers: Воркеры
   last_share: Последняя Шара
-  short_average: грубый
-  long_average: точный
+  short_average: грубый, краткий, средний
+  long_average: точний, долгий, средний
   no_workers_online: Нет воркеров онлайн
   notice: Уведомление
   json_api_url: Ваша основная статистика JSON API URL
@@ -112,7 +119,7 @@ luck:
   blocks: Блоки
   shares_diff: Шары/Сложность
   uncle_rate: Оценка Uncle
-  orphan_rate: Оценка Осиротевших
+  orphan_rate: Оценка Отвергнутых
 
 payments:
   pay_tx: На данный момент пул всегда платит tx комисию с его собственного кармана.
