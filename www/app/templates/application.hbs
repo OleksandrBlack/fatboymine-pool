@@ -8,10 +8,15 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
       </button>
+	  <a class="navbar-brand"><img src="/title.png" height="45"><br/><span class="logo-1">Pirl</span><span class="logo-2">Pool</span></a>
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav" >
-	  
+	          {{#active-li currentWhen='index'}}
+          {{#link-to 'index'}}
+            <i class="fa fa-home"></i> Home
+          {{/link-to}}
+        {{/active-li}}
 {{#active-li}}
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-align-justify"></i>Pools<span class="caret"></span></a>
           <ul class="dropdown-menu">
