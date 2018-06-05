@@ -128,3 +128,12 @@ payments:
   address: Address
   txid: Tx ID
   no_payouts_yet: No payouts yet
+
+miners:
+    total_hashrate: Total hashrate
+    total_miners: Total miners
+    miners: Miners
+    login: Login
+    hashrate: Hashrate
+    last_beat: Last Beat
+    no_miners: No miners

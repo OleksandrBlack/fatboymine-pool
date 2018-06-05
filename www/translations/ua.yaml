@@ -130,3 +130,12 @@ payments:
   address: Адреса
   txid: Tx ID
   no_payouts_yet: Ще немає виплат
+
+miners:
+    total_hashrate: Загальний хешрейт
+    total_miners: Всього майнерів
+    miners: Майнери
+    login: Логін
+    hashrate: Хешрейт
+    last_beat: Остання Активність
+    no_miners: Майнери відсутні
