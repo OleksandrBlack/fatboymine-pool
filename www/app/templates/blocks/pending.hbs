@@ -1,9 +1,10 @@
+<div class="container">
 {{#if model.candidates}}
 <h4>{{t "block.recently_found_blocks"}}</h4>
 <div class="table-responsive">
-  <table class="table table-condensed table-striped">
+  <table class="table table-condensed table-striped table-bordered">
     <thead>
-      <tr>
+      <tr class="table-title">
         <th>{{t "block.height"}}</th>
         <th>{{t "block.time_found"}}</th>
         <th>{{t "block.variance"}}</th>
@@ -11,7 +12,7 @@
     </thead>
     <tbody>
       {{#each model.candidates as |block|}}
-      <tr>
+      <tr class="table-warning">
         <td><a href="{{format-explorer 'block' block.height}}" rel="nofollow" target="_blank">{{format-number block.height}}</a></td>
         <td>{{format-date-locale block.timestamp}}</td>
         <td>
@@ -29,3 +30,4 @@
 {{else}}
 <h3>{{t "block.no_new_blocks_yet"}}</h3>
 {{/if}}
+</div>
