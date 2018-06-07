@@ -9,7 +9,7 @@ module.exports = function(defaults) {
       enabled: false
     }
   });
-
+  app.import('vendor/pings.js');
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //

@@ -19,41 +19,7 @@
     <meta name="googlebot" content="index,follow">
     <meta name="google-site-verification" content="YEsup9m3fdZ43fp2zISkuLnr_EgtNsX2e2f_RhFMysg" />
     <script src="https://cdn.polyfill.io/v1/polyfill.min.js?features=Intl.~locale.en"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-	var p = new Ping();
-var ua = "https://ella.fatboymine.com";
-var ru = "https://esn.solopool.org";
-var selector_ua = "ping-ua";
-var selector_ru = "ping-ru";
 
-function startPingUa(address, selector_ua) {
-  p.ping(address, function(err, data) {
-    if (err) {
-      data = data + " " + err;
-    }
-    
-    document.getElementById(selector_ua).innerHTML = data;
-  });
-}
-function startPingRu(address, selector_ru) {
-  p.ping(address, function(err, data) {
-    if (err) {
-      data = data + " " + err;
-    }
-    
-    document.getElementById(selector_ru).innerHTML = data;
-  });
-}
-
-startPingUa(ua, selector_ua);
-startPingRu(ru, selector_ru);
-
-setInterval(function() {
-	startPingUa(ua, selector_ua);
-	startPingRu(ru, selector_ru);
-}, 10000);
-    </script>
     {{content-for "head"}}
     <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
     <link rel="stylesheet" href="{{rootURL}}assets/fatboymine-pool.css">
