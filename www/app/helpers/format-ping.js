@@ -3,7 +3,7 @@ var p = new Ping();
 var site = "https://fatboymine.com";
 var selector = "ping-pool";
 
-function startPing(address, selector) {
+export function startPing(address, selector) {
   p.ping(address, function(err, data) {
     if (err) {
       data = data + " " + err;
@@ -14,7 +14,7 @@ function startPing(address, selector) {
 }
 
 
-function startPingHelper(args) {
+export function startPingHelper(args) {
   var address = args[0];
   var selector = args[1];
   
