@@ -1,7 +1,5 @@
 import Ember from 'ember';
 var p = new Ping();
-var site = "https://fatboymine.com";
-var selector = "ping-pool";
 
 export function startPing(address, selector) {
   p.ping(address, function(err, data) {
